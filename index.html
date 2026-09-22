@@ -13,10 +13,7 @@
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <a class="brand" href="#study" aria-label="词光首页">
-          <span class="brand-mark" aria-hidden="true">W</span>
-          <span><strong>词光</strong><small>Word Spark</small></span>
-        </a>
+        <p class="personal-message">Hi, Aden, you're the best!</p>
         <div class="streak" aria-label="连续学习天数">
           <span aria-hidden="true">🔥</span>
           <strong id="streak-count">0</strong>
@@ -44,7 +41,8 @@
         <section class="workspace">
           <nav class="mode-tabs" aria-label="功能切换">
             <button class="tab is-active" data-view="study" aria-selected="true">今日学习</button>
-            <button class="tab" data-view="quiz" aria-selected="false">小测验</button>
+            <button class="tab" data-view="quiz" aria-selected="false">认一认</button>
+            <button class="tab" data-view="spelling" aria-selected="false">拼一拼</button>
             <button class="tab" data-view="progress" aria-selected="false">学习记录</button>
           </nav>
 
@@ -75,7 +73,7 @@
 
           <section class="view" id="quiz-view" aria-labelledby="quiz-heading" hidden>
             <div class="view-heading">
-              <div><p class="eyebrow">中英双向练习</p><h2 id="quiz-heading">10 题小测验</h2></div>
+              <div><p class="eyebrow">中英双向选择</p><h2 id="quiz-heading">10 题认一认</h2></div>
               <span id="quiz-position" class="position">准备开始</span>
             </div>
             <div class="quiz-card" id="quiz-card">
@@ -83,7 +81,26 @@
               <h3 id="quiz-prompt">检验一下今天的成果</h3>
               <div id="quiz-options" class="quiz-options"></div>
               <p id="quiz-feedback" class="quiz-feedback" aria-live="polite"></p>
-              <button class="primary-button" id="quiz-start">开始测验</button>
+              <button class="primary-button" id="quiz-start">开始认一认</button>
+            </div>
+          </section>
+
+          <section class="view" id="spelling-view" aria-labelledby="spelling-heading" hidden>
+            <div class="view-heading">
+              <div><p class="eyebrow">看中文写英文</p><h2 id="spelling-heading">10 题拼一拼</h2></div>
+              <span id="spelling-position" class="position">准备开始</span>
+            </div>
+            <div class="spelling-card">
+              <p class="spelling-label" id="spelling-label">根据中文释义，输入对应的英文单词。</p>
+              <h3 id="spelling-prompt">准备好挑战拼写了吗？</h3>
+              <form id="spelling-form" hidden>
+                <label class="sr-only" for="spelling-input">输入英文单词</label>
+                <input id="spelling-input" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="在这里输入英文" />
+                <button class="primary-button" type="submit">提交答案</button>
+              </form>
+              <div id="spelling-feedback" class="spelling-feedback" aria-live="polite"></div>
+              <button class="primary-button" id="spelling-start">开始拼一拼</button>
+              <button class="primary-button" id="spelling-next" hidden>下一题</button>
             </div>
           </section>
 
