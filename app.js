@@ -108,7 +108,6 @@ function renderWord() {
   const word = words[state.currentIndex];
   if (!word) return;
   state.revealed = false;
-  $("#study-eyebrow").textContent = state.reviewMode ? "错词专项复习" : state.selectedUnits.join(" · ");
   $("#study-heading").textContent = state.reviewMode ? "再次练习" : "所选单元的单词";
   $("#word-position").textContent = `${state.currentIndex + 1} / ${words.length}`;
   $("#word-unit").textContent = word.unit;
