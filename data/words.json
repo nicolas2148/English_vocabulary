@@ -1,0 +1,2772 @@
+[
+  {
+    "id": "life",
+    "word": "life",
+    "phonetic": "/laɪf/",
+    "pos": "noun",
+    "meaning": "生活；生命（复数 lives）",
+    "example": "I like my school life.",
+    "exampleZh": "我喜欢我的学校生活。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "break",
+    "word": "break",
+    "phonetic": "/breɪk/",
+    "pos": "noun",
+    "meaning": "课间休息；间歇；休息",
+    "example": "We have a short break after class.",
+    "exampleZh": "我们下课后休息一会儿。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "ict",
+    "word": "ICT",
+    "phonetic": "/ˌaɪ siː ˈtiː/",
+    "pos": "noun",
+    "meaning": "信息通信技术（课程）",
+    "example": "We learn to use computers in ICT.",
+    "exampleZh": "我们在信息通信技术课上学习使用电脑。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "geography",
+    "word": "geography",
+    "phonetic": "/dʒiˈɒɡrəfi/",
+    "pos": "noun",
+    "meaning": "地理",
+    "example": "We learn about different countries in geography.",
+    "exampleZh": "我们在地理课上学习有关不同国家的知识。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "history",
+    "word": "history",
+    "phonetic": "/ˈhɪstri/",
+    "pos": "noun",
+    "meaning": "历史",
+    "example": "I enjoy learning about Chinese history.",
+    "exampleZh": "我喜欢学习中国历史。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "more",
+    "word": "more",
+    "phonetic": "/mɔː(r)/",
+    "pos": "determiner & pronoun",
+    "meaning": "更多的；更多",
+    "example": "We need more time to finish the work.",
+    "exampleZh": "我们需要更多时间来完成这项工作。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "instruction",
+    "word": "instruction",
+    "phonetic": "/ɪnˈstrʌkʃn/",
+    "pos": "noun",
+    "meaning": "指示；命令",
+    "example": "Please read each instruction carefully.",
+    "exampleZh": "请仔细阅读每一条指示。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "experiment",
+    "word": "experiment",
+    "phonetic": "/ɪkˈsperɪmənt/",
+    "pos": "noun",
+    "meaning": "实验；试验",
+    "example": "We do an experiment in the science lab.",
+    "exampleZh": "我们在科学实验室里做实验。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "activity",
+    "word": "activity",
+    "phonetic": "/ækˈtɪvəti/",
+    "pos": "noun",
+    "meaning": "活动",
+    "example": "Swimming is my favourite activity.",
+    "exampleZh": "游泳是我最喜欢的活动。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "club",
+    "word": "club",
+    "phonetic": "/klʌb/",
+    "pos": "noun",
+    "meaning": "社团",
+    "example": "Our school has a chess club.",
+    "exampleZh": "我们学校有一个国际象棋社团。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "calligraphy",
+    "word": "calligraphy",
+    "phonetic": "/kəˈlɪɡrəfi/",
+    "pos": "noun",
+    "meaning": "书法",
+    "example": "I practise Chinese calligraphy after school.",
+    "exampleZh": "我放学后练习中国书法。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "join",
+    "word": "join",
+    "phonetic": "/dʒɔɪn/",
+    "pos": "verb",
+    "meaning": "加入",
+    "example": "I want to join the music club.",
+    "exampleZh": "我想加入音乐社团。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "technology",
+    "word": "technology",
+    "phonetic": "/tekˈnɒlədʒi/",
+    "pos": "noun",
+    "meaning": "科技",
+    "example": "Technology helps us learn new things.",
+    "exampleZh": "科技帮助我们学习新事物。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "everyone",
+    "word": "everyone",
+    "phonetic": "/ˈevriwʌn/",
+    "pos": "pronoun",
+    "meaning": "每个人（同 everybody）",
+    "example": "Everyone in our class likes the game.",
+    "exampleZh": "我们班每个人都喜欢这个游戏。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "lab",
+    "word": "lab",
+    "phonetic": "/læb/",
+    "pos": "noun",
+    "meaning": "实验室（laboratory 的简称）",
+    "example": "Our science lab is on the second floor.",
+    "exampleZh": "我们的科学实验室在二楼。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "field",
+    "word": "field",
+    "phonetic": "/fiːld/",
+    "pos": "noun",
+    "meaning": "场地",
+    "example": "We play football on the field.",
+    "exampleZh": "我们在场地上踢足球。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "grade",
+    "word": "grade",
+    "phonetic": "/ɡreɪd/",
+    "pos": "noun",
+    "meaning": "年级",
+    "example": "My sister is in Grade Six.",
+    "exampleZh": "我妹妹上六年级。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "excuse",
+    "word": "excuse",
+    "phonetic": "/ɪkˈskjuːz/",
+    "pos": "verb",
+    "meaning": "原谅；宽恕",
+    "example": "Please excuse me for being late.",
+    "exampleZh": "请原谅我迟到了。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "excuse-me",
+    "word": "excuse me",
+    "phonetic": "/ɪkˈskjuːz miː/",
+    "pos": "phrase",
+    "meaning": "对不起；劳驾",
+    "example": "Excuse me, where is the library?",
+    "exampleZh": "劳驾，图书馆在哪里？",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "of-course",
+    "word": "of course",
+    "phonetic": "/əv ˈkɔːs/",
+    "pos": "phrase",
+    "meaning": "当然",
+    "example": "Of course you can join us.",
+    "exampleZh": "你当然可以加入我们。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "project",
+    "word": "project",
+    "phonetic": "/ˈprɒdʒekt/",
+    "pos": "noun",
+    "meaning": "项目",
+    "example": "We are working on a science project.",
+    "exampleZh": "我们正在做一个科学项目。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "start",
+    "word": "start",
+    "phonetic": "/stɑːt/",
+    "pos": "verb",
+    "meaning": "开始（做某事）",
+    "example": "Our lessons start at eight.",
+    "exampleZh": "我们的课八点开始。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "topic",
+    "word": "topic",
+    "phonetic": "/ˈtɒpɪk/",
+    "pos": "noun",
+    "meaning": "话题；主题",
+    "example": "The topic of today's lesson is food.",
+    "exampleZh": "今天这节课的主题是食物。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "online",
+    "word": "online",
+    "phonetic": "/ˌɒnˈlaɪn/",
+    "pos": "adverb & adjective",
+    "meaning": "在线；在线的；联网的",
+    "example": "We can read the story online.",
+    "exampleZh": "我们可以在线阅读这个故事。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "receive",
+    "word": "receive",
+    "phonetic": "/rɪˈsiːv/",
+    "pos": "verb",
+    "meaning": "接到；收到",
+    "example": "I receive a letter from my friend.",
+    "exampleZh": "我收到一封朋友的来信。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "reply",
+    "word": "reply",
+    "phonetic": "/rɪˈplaɪ/",
+    "pos": "noun",
+    "meaning": "回答；答复",
+    "example": "Thank you for your quick reply.",
+    "exampleZh": "谢谢你的迅速答复。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "group",
+    "word": "group",
+    "phonetic": "/ɡruːp/",
+    "pos": "noun",
+    "meaning": "组；群；批；类",
+    "example": "We work in a group of four.",
+    "exampleZh": "我们四人一组开展活动。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "most",
+    "word": "most",
+    "phonetic": "/məʊst/",
+    "pos": "adverb",
+    "meaning": "最",
+    "example": "Which subject do you like most?",
+    "exampleZh": "你最喜欢哪门学科？",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "a-m",
+    "word": "a.m.",
+    "phonetic": "/ˌeɪ ˈem/",
+    "pos": "abbreviation",
+    "meaning": "上午",
+    "example": "School starts at 8 a.m.",
+    "exampleZh": "学校上午八点开始上课。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "end",
+    "word": "end",
+    "phonetic": "/end/",
+    "pos": "verb",
+    "meaning": "结束",
+    "example": "Our lessons end at four.",
+    "exampleZh": "我们的课四点结束。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "p-m",
+    "word": "p.m.",
+    "phonetic": "/ˌpiː ˈem/",
+    "pos": "abbreviation",
+    "meaning": "下午",
+    "example": "We go home at 4 p.m.",
+    "exampleZh": "我们下午四点回家。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "difference",
+    "word": "difference",
+    "phonetic": "/ˈdɪfrəns/",
+    "pos": "noun",
+    "meaning": "差别；不同之处",
+    "example": "Can you find a difference between the two pictures?",
+    "exampleZh": "你能找出这两张图片的一处不同吗？",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "same",
+    "word": "same",
+    "phonetic": "/seɪm/",
+    "pos": "adjective",
+    "meaning": "相同的；一样的",
+    "example": "We are in the same class.",
+    "exampleZh": "我们在同一个班。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "during",
+    "word": "during",
+    "phonetic": "/ˈdjʊərɪŋ/",
+    "pos": "preposition",
+    "meaning": "在……期间",
+    "example": "Please listen carefully during the lesson.",
+    "exampleZh": "上课期间请认真听讲。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "outside",
+    "word": "outside",
+    "phonetic": "/ˌaʊtˈsaɪd/",
+    "pos": "adverb & preposition",
+    "meaning": "在外面；在……外面",
+    "example": "The children are playing outside.",
+    "exampleZh": "孩子们正在外面玩。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "noon",
+    "word": "noon",
+    "phonetic": "/nuːn/",
+    "pos": "noun",
+    "meaning": "正午；中午",
+    "example": "We have lunch at noon.",
+    "exampleZh": "我们中午吃午饭。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "connect",
+    "word": "connect",
+    "phonetic": "/kəˈnekt/",
+    "pos": "verb",
+    "meaning": "连接",
+    "example": "Connect the mouse to the computer.",
+    "exampleZh": "把鼠标连接到电脑上。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "comment",
+    "word": "comment",
+    "phonetic": "/ˈkɒment/",
+    "pos": "noun & verb",
+    "meaning": "议论；评论；解释；表达意见",
+    "example": "Please leave a comment about the story.",
+    "exampleZh": "请对这个故事留下一条评论。",
+    "unit": "Unit 1"
+  },
+  {
+    "id": "tie-unit-2",
+    "word": "tie",
+    "phonetic": "/taɪ/",
+    "pos": "noun",
+    "meaning": "联系；关系；纽带",
+    "example": "Love is a strong tie between family members.",
+    "exampleZh": "爱是家庭成员之间牢固的纽带。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "relation",
+    "word": "relation",
+    "phonetic": "/rɪˈleɪʃn/",
+    "pos": "noun",
+    "meaning": "关系；联系",
+    "example": "What is the relation between these two people?",
+    "exampleZh": "这两个人是什么关系？",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "introduce",
+    "word": "introduce",
+    "phonetic": "/ˌɪntrəˈdjuːs/",
+    "pos": "verb",
+    "meaning": "介绍",
+    "example": "Let me introduce my friend to you.",
+    "exampleZh": "让我向你介绍我的朋友。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "classmate",
+    "word": "classmate",
+    "phonetic": "/ˈklɑːsmeɪt/",
+    "pos": "noun",
+    "meaning": "同班同学",
+    "example": "My classmate helps me with maths.",
+    "exampleZh": "我的同班同学帮助我学习数学。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "relative",
+    "word": "relative",
+    "phonetic": "/ˈrelətɪv/",
+    "pos": "noun",
+    "meaning": "亲戚；亲属",
+    "example": "We visit our relatives during the holiday.",
+    "exampleZh": "我们在假期里走访亲戚。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "only",
+    "word": "only",
+    "phonetic": "/ˈəʊnli/",
+    "pos": "adjective",
+    "meaning": "仅有的；唯一的",
+    "example": "This is the only photo of my grandfather.",
+    "exampleZh": "这是我祖父唯一的一张照片。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "only-child",
+    "word": "only child",
+    "phonetic": "/ˌəʊnli ˈtʃaɪld/",
+    "pos": "phrase",
+    "meaning": "独生子（或女）",
+    "example": "Tom is an only child.",
+    "exampleZh": "汤姆是独生子。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "twin",
+    "word": "twin",
+    "phonetic": "/twɪn/",
+    "pos": "noun",
+    "meaning": "双胞胎之一",
+    "example": "My cousin is a twin.",
+    "exampleZh": "我的表弟是双胞胎之一。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "husband",
+    "word": "husband",
+    "phonetic": "/ˈhʌzbənd/",
+    "pos": "noun",
+    "meaning": "丈夫",
+    "example": "My aunt's husband is a teacher.",
+    "exampleZh": "我姑姑的丈夫是一名老师。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "wife",
+    "word": "wife",
+    "phonetic": "/waɪf/",
+    "pos": "noun",
+    "meaning": "妻子（复数 wives）",
+    "example": "His wife works in a school.",
+    "exampleZh": "他的妻子在一所学校工作。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "son",
+    "word": "son",
+    "phonetic": "/sʌn/",
+    "pos": "noun",
+    "meaning": "儿子",
+    "example": "Their son is twelve years old.",
+    "exampleZh": "他们的儿子十二岁。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "daughter",
+    "word": "daughter",
+    "phonetic": "/ˈdɔːtə(r)/",
+    "pos": "noun",
+    "meaning": "女儿",
+    "example": "Their daughter likes drawing.",
+    "exampleZh": "他们的女儿喜欢画画。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "other",
+    "word": "other",
+    "phonetic": "/ˈʌðə(r)/",
+    "pos": "adjective & pronoun",
+    "meaning": "另外的；其他的；另外的人（或物）",
+    "example": "I like this book and the other one too.",
+    "exampleZh": "我喜欢这本书，也喜欢另一本。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "member",
+    "word": "member",
+    "phonetic": "/ˈmembə(r)/",
+    "pos": "noun",
+    "meaning": "成员；分子",
+    "example": "Every family member helps at home.",
+    "exampleZh": "每个家庭成员都帮忙做家务。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "add",
+    "word": "add",
+    "phonetic": "/æd/",
+    "pos": "verb",
+    "meaning": "添加；增加",
+    "example": "Please add some milk to the tea.",
+    "exampleZh": "请往茶里加些牛奶。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "note",
+    "word": "note",
+    "phonetic": "/nəʊt/",
+    "pos": "noun",
+    "meaning": "笔记；记录；音符",
+    "example": "I write a note to my mother.",
+    "exampleZh": "我给妈妈写了一张便条。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "album",
+    "word": "album",
+    "phonetic": "/ˈælbəm/",
+    "pos": "noun",
+    "meaning": "相册；影集",
+    "example": "We look at our family album together.",
+    "exampleZh": "我们一起看家庭相册。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "teach",
+    "word": "teach",
+    "phonetic": "/tiːtʃ/",
+    "pos": "verb",
+    "meaning": "教（某人）；使明白或学会",
+    "example": "Can you teach me to play chess?",
+    "exampleZh": "你能教我下国际象棋吗？",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "homework",
+    "word": "homework",
+    "phonetic": "/ˈhəʊmwɜːk/",
+    "pos": "noun",
+    "meaning": "家庭作业",
+    "example": "I do my homework after dinner.",
+    "exampleZh": "我晚饭后做家庭作业。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "guitar",
+    "word": "guitar",
+    "phonetic": "/ɡɪˈtɑː(r)/",
+    "pos": "noun",
+    "meaning": "吉他",
+    "example": "My brother can play the guitar.",
+    "exampleZh": "我哥哥会弹吉他。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "elder",
+    "word": "elder",
+    "phonetic": "/ˈeldə(r)/",
+    "pos": "adjective",
+    "meaning": "年长的；年龄较大的",
+    "example": "My elder sister is good at English.",
+    "exampleZh": "我姐姐擅长英语。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "sofa",
+    "word": "sofa",
+    "phonetic": "/ˈsəʊfə/",
+    "pos": "noun",
+    "meaning": "长沙发",
+    "example": "Grandpa is sitting on the sofa.",
+    "exampleZh": "爷爷正坐在长沙发上。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "round",
+    "word": "round",
+    "phonetic": "/raʊnd/",
+    "pos": "adjective",
+    "meaning": "圆形的",
+    "example": "We have a round table in the kitchen.",
+    "exampleZh": "我们厨房里有一张圆桌。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "dark",
+    "word": "dark",
+    "phonetic": "/dɑːk/",
+    "pos": "adjective",
+    "meaning": "乌黑的；深色的；黑暗的",
+    "example": "It is dark outside now.",
+    "exampleZh": "现在外面天黑了。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "chess",
+    "word": "chess",
+    "phonetic": "/tʃes/",
+    "pos": "noun",
+    "meaning": "国际象棋",
+    "example": "I play chess with my father.",
+    "exampleZh": "我和爸爸下国际象棋。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "duty",
+    "word": "duty",
+    "phonetic": "/ˈdjuːti/",
+    "pos": "noun",
+    "meaning": "责任；义务；本分",
+    "example": "It is our duty to keep the classroom clean.",
+    "exampleZh": "保持教室清洁是我们的责任。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "born",
+    "word": "born",
+    "phonetic": "/bɔːn/",
+    "pos": "verb",
+    "meaning": "出生；出世（用于 be born）",
+    "example": "I was born in Shanghai.",
+    "exampleZh": "我出生在上海。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "weekend",
+    "word": "weekend",
+    "phonetic": "/ˌwiːkˈend/",
+    "pos": "noun",
+    "meaning": "周末",
+    "example": "We visit Grandma at the weekend.",
+    "exampleZh": "我们周末去看望奶奶。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "thing",
+    "word": "thing",
+    "phonetic": "/θɪŋ/",
+    "pos": "noun",
+    "meaning": "事情；事件",
+    "example": "Helping others is a good thing.",
+    "exampleZh": "帮助他人是一件好事。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "enough",
+    "word": "enough",
+    "phonetic": "/ɪˈnʌf/",
+    "pos": "adverb",
+    "meaning": "足够地；充分地",
+    "example": "My brother is old enough to go to school.",
+    "exampleZh": "我弟弟已经到了可以上学的年龄。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "well-done",
+    "word": "Well done!",
+    "phonetic": "/ˌwel ˈdʌn/",
+    "pos": "phrase",
+    "meaning": "做得好！干得好！",
+    "example": "Well done! Your room is very tidy.",
+    "exampleZh": "干得好！你的房间非常整洁。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "dish",
+    "word": "dish",
+    "phonetic": "/dɪʃ/",
+    "pos": "noun",
+    "meaning": "碟子；盘子；一道菜；菜肴",
+    "example": "This fish dish is delicious.",
+    "exampleZh": "这道鱼菜很好吃。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "usually",
+    "word": "usually",
+    "phonetic": "/ˈjuːʒuəli/",
+    "pos": "adverb",
+    "meaning": "通常地；经常地",
+    "example": "We usually have dinner at six.",
+    "exampleZh": "我们通常六点吃晚饭。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "quick",
+    "word": "quick",
+    "phonetic": "/kwɪk/",
+    "pos": "adjective",
+    "meaning": "快的；迅速的",
+    "example": "We have a quick breakfast before school.",
+    "exampleZh": "我们上学前匆匆吃了早餐。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "together",
+    "word": "together",
+    "phonetic": "/təˈɡeðə(r)/",
+    "pos": "adverb",
+    "meaning": "在一起；共同",
+    "example": "We cook dinner together.",
+    "exampleZh": "我们一起做晚饭。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "flat",
+    "word": "flat",
+    "phonetic": "/flæt/",
+    "pos": "noun",
+    "meaning": "公寓；一套房间",
+    "example": "Our flat has two bedrooms.",
+    "exampleZh": "我们的公寓有两间卧室。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "fun",
+    "word": "fun",
+    "phonetic": "/fʌn/",
+    "pos": "noun",
+    "meaning": "乐趣；快乐",
+    "example": "We have fun playing games.",
+    "exampleZh": "我们玩游戏玩得很开心。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "celebration",
+    "word": "celebration",
+    "phonetic": "/ˌselɪˈbreɪʃn/",
+    "pos": "noun",
+    "meaning": "庆典；庆祝活动",
+    "example": "We have a celebration for Grandma's birthday.",
+    "exampleZh": "我们为奶奶的生日举行庆祝活动。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "prepare",
+    "word": "prepare",
+    "phonetic": "/prɪˈpeə(r)/",
+    "pos": "verb",
+    "meaning": "使做好准备；把……预备好",
+    "example": "Let's prepare dinner for our parents.",
+    "exampleZh": "我们为父母准备晚饭吧。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "decorate",
+    "word": "decorate",
+    "phonetic": "/ˈdekəreɪt/",
+    "pos": "verb",
+    "meaning": "装饰",
+    "example": "We decorate the room with flowers.",
+    "exampleZh": "我们用鲜花装饰房间。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "living-room",
+    "word": "living room",
+    "phonetic": "/ˈlɪvɪŋ ruːm/",
+    "pos": "noun",
+    "meaning": "客厅；起居室（同 sitting room）",
+    "example": "We watch TV in the living room.",
+    "exampleZh": "我们在客厅看电视。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "balloon",
+    "word": "balloon",
+    "phonetic": "/bəˈluːn/",
+    "pos": "noun",
+    "meaning": "气球",
+    "example": "There is a red balloon by the door.",
+    "exampleZh": "门边有一个红气球。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "set",
+    "word": "set",
+    "phonetic": "/set/",
+    "pos": "verb",
+    "meaning": "放置；摆放餐具",
+    "example": "Please set the table for dinner.",
+    "exampleZh": "请摆好餐具准备吃晚饭。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "surprised",
+    "word": "surprised",
+    "phonetic": "/səˈpraɪzd/",
+    "pos": "adjective",
+    "meaning": "惊奇的；惊讶的；感觉意外的",
+    "example": "Mum is surprised to see the birthday cake.",
+    "exampleZh": "妈妈看到生日蛋糕很惊讶。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "super-excited",
+    "word": "super-excited",
+    "phonetic": "/ˌsuːpər ɪkˈsaɪtɪd/",
+    "pos": "adjective",
+    "meaning": "超级激动的；格外兴奋的",
+    "example": "I am super-excited about the party.",
+    "exampleZh": "我对这场聚会感到格外兴奋。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "joy",
+    "word": "joy",
+    "phonetic": "/dʒɔɪ/",
+    "pos": "noun",
+    "meaning": "高兴；愉快；喜悦",
+    "example": "The good news fills us with joy.",
+    "exampleZh": "这个好消息让我们满心喜悦。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "jump-for-joy",
+    "word": "jump for joy",
+    "phonetic": "/ˌdʒʌmp fə ˈdʒɔɪ/",
+    "pos": "phrase",
+    "meaning": "欢呼雀跃",
+    "example": "The children jump for joy when they see the gifts.",
+    "exampleZh": "孩子们看到礼物时欢呼雀跃。",
+    "unit": "Unit 2"
+  },
+  {
+    "id": "something",
+    "word": "something",
+    "phonetic": "/ˈsʌmθɪŋ/",
+    "pos": "pronoun",
+    "meaning": "某事；某物",
+    "example": "I want something to eat.",
+    "exampleZh": "我想吃点东西。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "beef",
+    "word": "beef",
+    "phonetic": "/biːf/",
+    "pos": "noun",
+    "meaning": "牛肉",
+    "example": "We have beef and rice for lunch.",
+    "exampleZh": "我们午饭吃牛肉和米饭。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "tofu",
+    "word": "tofu",
+    "phonetic": "/ˈtəʊfuː/",
+    "pos": "noun",
+    "meaning": "豆腐",
+    "example": "My mother makes tofu soup.",
+    "exampleZh": "我妈妈做豆腐汤。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "pepper",
+    "word": "pepper",
+    "phonetic": "/ˈpepə(r)/",
+    "pos": "noun",
+    "meaning": "甜椒",
+    "example": "Cut the red pepper into small pieces.",
+    "exampleZh": "把这个红甜椒切成小块。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "cabbage",
+    "word": "cabbage",
+    "phonetic": "/ˈkæbɪdʒ/",
+    "pos": "noun",
+    "meaning": "卷心菜",
+    "example": "We need a cabbage for the soup.",
+    "exampleZh": "我们需要一个卷心菜来煮汤。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "onion",
+    "word": "onion",
+    "phonetic": "/ˈʌnjən/",
+    "pos": "noun",
+    "meaning": "洋葱",
+    "example": "Please cut up an onion.",
+    "exampleZh": "请切一个洋葱。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "carrot",
+    "word": "carrot",
+    "phonetic": "/ˈkærət/",
+    "pos": "noun",
+    "meaning": "胡萝卜",
+    "example": "The rabbit is eating a carrot.",
+    "exampleZh": "兔子正在吃一根胡萝卜。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "watermelon",
+    "word": "watermelon",
+    "phonetic": "/ˈwɔːtəmelən/",
+    "pos": "noun",
+    "meaning": "西瓜",
+    "example": "We share a watermelon on a hot day.",
+    "exampleZh": "炎热的日子里，我们分着吃一个西瓜。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "cucumber",
+    "word": "cucumber",
+    "phonetic": "/ˈkjuːkʌmbə(r)/",
+    "pos": "noun",
+    "meaning": "黄瓜",
+    "example": "I put some cucumber in the salad.",
+    "exampleZh": "我在沙拉里放了一些黄瓜。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "strawberry",
+    "word": "strawberry",
+    "phonetic": "/ˈstrɔːbəri/",
+    "pos": "noun",
+    "meaning": "草莓",
+    "example": "This strawberry is sweet.",
+    "exampleZh": "这颗草莓很甜。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "pear",
+    "word": "pear",
+    "phonetic": "/peə(r)/",
+    "pos": "noun",
+    "meaning": "梨",
+    "example": "Would you like a pear?",
+    "exampleZh": "你想吃一个梨吗？",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "yogurt",
+    "word": "yogurt",
+    "phonetic": "/ˈjɒɡət/",
+    "pos": "noun",
+    "meaning": "酸奶；一份酸奶",
+    "example": "I have yogurt for breakfast.",
+    "exampleZh": "我早餐喝酸奶。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "cheese",
+    "word": "cheese",
+    "phonetic": "/tʃiːz/",
+    "pos": "noun",
+    "meaning": "干酪；奶酪",
+    "example": "There is some cheese in my sandwich.",
+    "exampleZh": "我的三明治里有一些奶酪。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "corn",
+    "word": "corn",
+    "phonetic": "/kɔːn/",
+    "pos": "noun",
+    "meaning": "玉米；谷物",
+    "example": "We grow corn on the farm.",
+    "exampleZh": "我们在农场种玉米。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "butter",
+    "word": "butter",
+    "phonetic": "/ˈbʌtə(r)/",
+    "pos": "noun",
+    "meaning": "黄油",
+    "example": "I put butter on my bread.",
+    "exampleZh": "我在面包上涂黄油。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "oil",
+    "word": "oil",
+    "phonetic": "/ɔɪl/",
+    "pos": "noun",
+    "meaning": "食用油",
+    "example": "Put a little oil in the pan.",
+    "exampleZh": "在平底锅里放一点食用油。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "salt",
+    "word": "salt",
+    "phonetic": "/sɔːlt/",
+    "pos": "noun",
+    "meaning": "盐；食盐",
+    "example": "This soup needs a little salt.",
+    "exampleZh": "这汤需要加一点盐。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "bean",
+    "word": "bean",
+    "phonetic": "/biːn/",
+    "pos": "noun",
+    "meaning": "豆；豆科植物",
+    "example": "We grow beans in the garden.",
+    "exampleZh": "我们在花园里种豆子。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "product",
+    "word": "product",
+    "phonetic": "/ˈprɒdʌkt/",
+    "pos": "noun",
+    "meaning": "产品；制品",
+    "example": "Cheese is a milk product.",
+    "exampleZh": "奶酪是一种奶制品。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "grain",
+    "word": "grain",
+    "phonetic": "/ɡreɪn/",
+    "pos": "noun",
+    "meaning": "谷物；谷粒",
+    "example": "Rice is a kind of grain.",
+    "exampleZh": "稻米是一种谷物。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "rainbow",
+    "word": "rainbow",
+    "phonetic": "/ˈreɪnbəʊ/",
+    "pos": "noun",
+    "meaning": "虹；彩虹",
+    "example": "We see a rainbow after the rain.",
+    "exampleZh": "雨后我们看到一道彩虹。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "balanced",
+    "word": "balanced",
+    "phonetic": "/ˈbælənst/",
+    "pos": "adjective",
+    "meaning": "保持（或显示）平衡的",
+    "example": "A balanced diet keeps us healthy.",
+    "exampleZh": "均衡的饮食让我们保持健康。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "diet",
+    "word": "diet",
+    "phonetic": "/ˈdaɪət/",
+    "pos": "noun",
+    "meaning": "日常饮食；日常食物",
+    "example": "Fruit is an important part of my diet.",
+    "exampleZh": "水果是我日常饮食的重要组成部分。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "each",
+    "word": "each",
+    "phonetic": "/iːtʃ/",
+    "pos": "determiner & pronoun",
+    "meaning": "各自；各个；每个",
+    "example": "Each student gets an apple.",
+    "exampleZh": "每个学生都得到一个苹果。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "plenty",
+    "word": "plenty",
+    "phonetic": "/ˈplenti/",
+    "pos": "pronoun",
+    "meaning": "大量",
+    "example": "There is plenty for everyone to eat.",
+    "exampleZh": "有足够多的东西供大家吃。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "plenty-of",
+    "word": "plenty of",
+    "phonetic": "/ˈplenti əv/",
+    "pos": "phrase",
+    "meaning": "大量；很多的",
+    "example": "Drink plenty of water every day.",
+    "exampleZh": "每天要喝足够的水。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "choice",
+    "word": "choice",
+    "phonetic": "/tʃɔɪs/",
+    "pos": "noun",
+    "meaning": "选择；挑选；抉择",
+    "example": "Fruit is a healthy choice for a snack.",
+    "exampleZh": "选择水果作为零食很健康。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "list",
+    "word": "list",
+    "phonetic": "/lɪst/",
+    "pos": "noun",
+    "meaning": "一览表；清单",
+    "example": "Let's make a shopping list.",
+    "exampleZh": "我们列一份购物清单吧。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "few",
+    "word": "few",
+    "phonetic": "/fjuː/",
+    "pos": "determiner & adjective",
+    "meaning": "不多；很少",
+    "example": "There are few eggs left in the fridge.",
+    "exampleZh": "冰箱里几乎没有鸡蛋了。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "a-few",
+    "word": "a few",
+    "phonetic": "/ə ˈfjuː/",
+    "pos": "phrase",
+    "meaning": "有些；几个（用于可数名词之前）",
+    "example": "I buy a few apples.",
+    "exampleZh": "我买了几个苹果。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "pleasure",
+    "word": "pleasure",
+    "phonetic": "/ˈpleʒə(r)/",
+    "pos": "noun",
+    "meaning": "高兴；快乐；愉快",
+    "example": "Cooking with my family is a pleasure.",
+    "exampleZh": "和家人一起做饭是一件乐事。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "ingredient",
+    "word": "ingredient",
+    "phonetic": "/ɪnˈɡriːdiənt/",
+    "pos": "noun",
+    "meaning": "（尤指烹饪）材料；成分",
+    "example": "Milk is an ingredient in this cake.",
+    "exampleZh": "牛奶是这个蛋糕的一种原料。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "tasty",
+    "word": "tasty",
+    "phonetic": "/ˈteɪsti/",
+    "pos": "adjective",
+    "meaning": "美味的；可口的",
+    "example": "This soup is very tasty.",
+    "exampleZh": "这汤非常美味。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "need",
+    "word": "need",
+    "phonetic": "/niːd/",
+    "pos": "verb",
+    "meaning": "需要",
+    "example": "We need two eggs for the cake.",
+    "exampleZh": "我们做蛋糕需要两个鸡蛋。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "fridge",
+    "word": "fridge",
+    "phonetic": "/frɪdʒ/",
+    "pos": "noun",
+    "meaning": "冰箱（refrigerator 的简称）",
+    "example": "Keep the milk in the fridge.",
+    "exampleZh": "把牛奶放在冰箱里保存。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "surprise",
+    "word": "surprise",
+    "phonetic": "/səˈpraɪz/",
+    "pos": "noun & verb",
+    "meaning": "意想不到的事；使惊奇；使诧异；使感到意外",
+    "example": "The birthday dinner is a surprise for Dad.",
+    "exampleZh": "这顿生日晚餐是给爸爸的一个惊喜。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "blog",
+    "word": "blog",
+    "phonetic": "/blɒɡ/",
+    "pos": "noun",
+    "meaning": "博客；网志",
+    "example": "She writes about food on her blog.",
+    "exampleZh": "她在博客上写有关食物的文章。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "as",
+    "word": "as",
+    "phonetic": "/æz; əz/",
+    "pos": "preposition",
+    "meaning": "作为；当作",
+    "example": "We eat fruit as a snack.",
+    "exampleZh": "我们把水果当作零食吃。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "soy-sauce",
+    "word": "soy sauce",
+    "phonetic": "/ˌsɔɪ ˈsɔːs/",
+    "pos": "noun",
+    "meaning": "酱油（同 soya sauce）",
+    "example": "Add a little soy sauce to the noodles.",
+    "exampleZh": "往面条里加一点酱油。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "into",
+    "word": "into",
+    "phonetic": "/ˈɪntuː; ˈɪntə/",
+    "pos": "preposition",
+    "meaning": "（表示状态的变化）；进入",
+    "example": "Cut the carrot into small pieces.",
+    "exampleZh": "把胡萝卜切成小块。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "piece",
+    "word": "piece",
+    "phonetic": "/piːs/",
+    "pos": "noun",
+    "meaning": "碎片；碎块",
+    "example": "Would you like a piece of cake?",
+    "exampleZh": "你想吃一块蛋糕吗？",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "fry",
+    "word": "fry",
+    "phonetic": "/fraɪ/",
+    "pos": "verb",
+    "meaning": "油炒；油煎",
+    "example": "Dad will fry an egg for me.",
+    "exampleZh": "爸爸要给我煎一个鸡蛋。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "finally",
+    "word": "finally",
+    "phonetic": "/ˈfaɪnəli/",
+    "pos": "adverb",
+    "meaning": "最后",
+    "example": "Finally, put the soup into bowls.",
+    "exampleZh": "最后，把汤盛进碗里。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "boil",
+    "word": "boil",
+    "phonetic": "/bɔɪl/",
+    "pos": "verb",
+    "meaning": "用沸水煮；烧开",
+    "example": "Boil the water before making tea.",
+    "exampleZh": "泡茶前先把水烧开。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "side",
+    "word": "side",
+    "phonetic": "/saɪd/",
+    "pos": "noun",
+    "meaning": "一边；侧面",
+    "example": "Put the spoon on the right side of the bowl.",
+    "exampleZh": "把勺子放在碗的右边。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "side-dish",
+    "word": "side dish",
+    "phonetic": "/ˈsaɪd dɪʃ/",
+    "pos": "phrase",
+    "meaning": "（随同主菜一起上的）配菜",
+    "example": "We have a salad as a side dish.",
+    "exampleZh": "我们用沙拉作配菜。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "mutton",
+    "word": "mutton",
+    "phonetic": "/ˈmʌtn/",
+    "pos": "noun",
+    "meaning": "羊肉",
+    "example": "Grandpa likes mutton soup.",
+    "exampleZh": "爷爷喜欢羊肉汤。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "recipe",
+    "word": "recipe",
+    "phonetic": "/ˈresəpi/",
+    "pos": "noun",
+    "meaning": "食谱；烹饪法",
+    "example": "This recipe is easy to follow.",
+    "exampleZh": "这个食谱很容易照着做。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "beat",
+    "word": "beat",
+    "phonetic": "/biːt/",
+    "pos": "verb",
+    "meaning": "（用叉等）快速搅拌；打",
+    "example": "Beat the eggs in a bowl.",
+    "exampleZh": "把鸡蛋放在碗里打散。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "chopsticks",
+    "word": "chopsticks",
+    "phonetic": "/ˈtʃɒpstɪks/",
+    "pos": "noun",
+    "meaning": "筷子（复数）",
+    "example": "I eat noodles with chopsticks.",
+    "exampleZh": "我用筷子吃面条。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "bowl",
+    "word": "bowl",
+    "phonetic": "/bəʊl/",
+    "pos": "noun",
+    "meaning": "碗",
+    "example": "There is a bowl of rice on the table.",
+    "exampleZh": "桌上有一碗米饭。",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "menu",
+    "word": "menu",
+    "phonetic": "/ˈmenjuː/",
+    "pos": "noun",
+    "meaning": "菜单",
+    "example": "May I see the menu, please?",
+    "exampleZh": "请让我看一下菜单好吗？",
+    "unit": "Unit 3"
+  },
+  {
+    "id": "date",
+    "word": "date",
+    "phonetic": "/deɪt/",
+    "pos": "noun",
+    "meaning": "日期；日子",
+    "example": "What is the date today?",
+    "exampleZh": "今天是几月几日？",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "ground",
+    "word": "ground",
+    "phonetic": "/ɡraʊnd/",
+    "pos": "noun",
+    "meaning": "（特定用途的）场地；地面",
+    "example": "Please do not sit on the wet ground.",
+    "exampleZh": "请不要坐在潮湿的地面上。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "sports-ground",
+    "word": "sports ground",
+    "phonetic": "/ˈspɔːts ɡraʊnd/",
+    "pos": "phrase",
+    "meaning": "运动场；操场",
+    "example": "We run on the sports ground after school.",
+    "exampleZh": "我们放学后在操场上跑步。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "gym",
+    "word": "gym",
+    "phonetic": "/dʒɪm/",
+    "pos": "noun",
+    "meaning": "健身房；体育馆（gymnasium 的简称）",
+    "example": "We play basketball in the gym.",
+    "exampleZh": "我们在体育馆里打篮球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "team",
+    "word": "team",
+    "phonetic": "/tiːm/",
+    "pos": "noun",
+    "meaning": "（游戏或运动的）队",
+    "example": "She is on the school basketball team.",
+    "exampleZh": "她是校篮球队的队员。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "high",
+    "word": "high",
+    "phonetic": "/haɪ/",
+    "pos": "adjective",
+    "meaning": "高的",
+    "example": "The wall is too high to climb.",
+    "exampleZh": "这堵墙太高，爬不上去。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "rope",
+    "word": "rope",
+    "phonetic": "/rəʊp/",
+    "pos": "noun",
+    "meaning": "绳",
+    "example": "Hold the rope with both hands.",
+    "exampleZh": "用双手握住绳子。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "kick",
+    "word": "kick",
+    "phonetic": "/kɪk/",
+    "pos": "verb",
+    "meaning": "踢",
+    "example": "Kick the ball to me, please.",
+    "exampleZh": "请把球踢给我。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "rock",
+    "word": "rock",
+    "phonetic": "/rɒk/",
+    "pos": "noun",
+    "meaning": "岩石",
+    "example": "There is a large rock by the river.",
+    "exampleZh": "河边有一块大岩石。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "climb",
+    "word": "climb",
+    "phonetic": "/klaɪm/",
+    "pos": "verb",
+    "meaning": "攀登；爬",
+    "example": "We climb the hill together.",
+    "exampleZh": "我们一起爬这座小山。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "rock-climbing",
+    "word": "rock climbing",
+    "phonetic": "/ˈrɒk klaɪmɪŋ/",
+    "pos": "phrase",
+    "meaning": "攀岩",
+    "example": "Rock climbing is an exciting sport.",
+    "exampleZh": "攀岩是一项令人兴奋的运动。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "kung-fu",
+    "word": "kung fu",
+    "phonetic": "/ˌkʌŋ ˈfuː/",
+    "pos": "noun",
+    "meaning": "功夫（中国拳术）",
+    "example": "My uncle teaches kung fu.",
+    "exampleZh": "我叔叔教功夫。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "active",
+    "word": "active",
+    "phonetic": "/ˈæktɪv/",
+    "pos": "adjective",
+    "meaning": "活跃的；充满活力的；积极的",
+    "example": "My little brother is very active.",
+    "exampleZh": "我弟弟非常活泼。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "part",
+    "word": "part",
+    "phonetic": "/pɑːt/",
+    "pos": "noun",
+    "meaning": "部分",
+    "example": "Exercise is an important part of my day.",
+    "exampleZh": "锻炼是我每天生活中的重要部分。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "take-part-in",
+    "word": "take part in",
+    "phonetic": "/teɪk ˈpɑːt ɪn/",
+    "pos": "phrase",
+    "meaning": "参加",
+    "example": "I want to take part in the sports meeting.",
+    "exampleZh": "我想参加运动会。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "baseball",
+    "word": "baseball",
+    "phonetic": "/ˈbeɪsbɔːl/",
+    "pos": "noun",
+    "meaning": "棒球运动",
+    "example": "My cousin likes playing baseball.",
+    "exampleZh": "我的表哥喜欢打棒球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "volleyball",
+    "word": "volleyball",
+    "phonetic": "/ˈvɒlibɔːl/",
+    "pos": "noun",
+    "meaning": "排球；排球运动",
+    "example": "We play volleyball after school.",
+    "exampleZh": "我们放学后打排球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "badminton",
+    "word": "badminton",
+    "phonetic": "/ˈbædmɪntən/",
+    "pos": "noun",
+    "meaning": "羽毛球运动",
+    "example": "I play badminton with my mother.",
+    "exampleZh": "我和妈妈打羽毛球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "tennis",
+    "word": "tennis",
+    "phonetic": "/ˈtenɪs/",
+    "pos": "noun",
+    "meaning": "网球",
+    "example": "She plays tennis every Sunday.",
+    "exampleZh": "她每个星期日都打网球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "pull",
+    "word": "pull",
+    "phonetic": "/pʊl/",
+    "pos": "verb",
+    "meaning": "拉；拔出",
+    "example": "Please pull the door open.",
+    "exampleZh": "请把门拉开。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "jog",
+    "word": "jog",
+    "phonetic": "/dʒɒɡ/",
+    "pos": "verb",
+    "meaning": "慢跑",
+    "example": "My parents jog in the park every morning.",
+    "exampleZh": "我父母每天早晨在公园慢跑。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "safety",
+    "word": "safety",
+    "phonetic": "/ˈseɪfti/",
+    "pos": "noun",
+    "meaning": "安全；平安",
+    "example": "Safety comes first in sports.",
+    "exampleZh": "运动时安全第一。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "ankle",
+    "word": "ankle",
+    "phonetic": "/ˈæŋkl/",
+    "pos": "noun",
+    "meaning": "踝；踝关节",
+    "example": "My ankle hurts after the game.",
+    "exampleZh": "比赛后我的脚踝疼。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "match",
+    "word": "match",
+    "phonetic": "/mætʃ/",
+    "pos": "noun",
+    "meaning": "比赛",
+    "example": "We watch a football match on TV.",
+    "exampleZh": "我们在电视上看足球比赛。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "gear",
+    "word": "gear",
+    "phonetic": "/ɡɪə(r)/",
+    "pos": "noun",
+    "meaning": "（某种活动的）设备；用具；衣服",
+    "example": "Put on your sports gear before the game.",
+    "exampleZh": "比赛前穿戴好运动装备。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "example",
+    "word": "example",
+    "phonetic": "/ɪɡˈzɑːmpl/",
+    "pos": "noun",
+    "meaning": "例子；实例",
+    "example": "Can you give me an example?",
+    "exampleZh": "你能给我举个例子吗？",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "for-example",
+    "word": "for example",
+    "phonetic": "/fər ɪɡˈzɑːmpl/",
+    "pos": "phrase",
+    "meaning": "例如",
+    "example": "I like ball games, for example, tennis.",
+    "exampleZh": "我喜欢球类运动，例如网球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "warm-up",
+    "word": "warm up",
+    "phonetic": "/ˌwɔːm ˈʌp/",
+    "pos": "phrase",
+    "meaning": "做准备活动；热身",
+    "example": "We warm up before running.",
+    "exampleZh": "我们跑步前先热身。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "watch-out",
+    "word": "watch out",
+    "phonetic": "/ˌwɒtʃ ˈaʊt/",
+    "pos": "phrase",
+    "meaning": "小心；留神；注意",
+    "example": "Watch out! A ball is coming.",
+    "exampleZh": "小心！一个球飞过来了。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "matter",
+    "word": "matter",
+    "phonetic": "/ˈmætə(r)/",
+    "pos": "noun",
+    "meaning": "问题；事情",
+    "example": "We need to talk about this matter.",
+    "exampleZh": "我们需要谈谈这件事。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "what-s-the-matter",
+    "word": "What's the matter?",
+    "phonetic": "/wɒts ðə ˈmætə(r)/",
+    "pos": "phrase",
+    "meaning": "怎么了？",
+    "example": "What's the matter? Does your knee hurt?",
+    "exampleZh": "怎么了？你的膝盖疼吗？",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "happen",
+    "word": "happen",
+    "phonetic": "/ˈhæpən/",
+    "pos": "verb",
+    "meaning": "发生",
+    "example": "Accidents can happen during a game.",
+    "exampleZh": "比赛中可能发生意外。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "just",
+    "word": "just",
+    "phonetic": "/dʒʌst/",
+    "pos": "adverb",
+    "meaning": "仅仅是；只是",
+    "example": "It is just a game.",
+    "exampleZh": "这只是一场游戏。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "fall",
+    "word": "fall",
+    "phonetic": "/fɔːl/",
+    "pos": "verb",
+    "meaning": "突然倒下；跌倒",
+    "example": "Be careful, or you may fall.",
+    "exampleZh": "小心，不然你可能会跌倒。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "guess",
+    "word": "guess",
+    "phonetic": "/ɡes/",
+    "pos": "verb",
+    "meaning": "猜测；估计",
+    "example": "Can you guess the final score?",
+    "exampleZh": "你能猜出最后的比分吗？",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "knee",
+    "word": "knee",
+    "phonetic": "/niː/",
+    "pos": "noun",
+    "meaning": "膝盖",
+    "example": "I hurt my knee in the match.",
+    "exampleZh": "我在比赛中伤了膝盖。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "how-come",
+    "word": "How come?",
+    "phonetic": "/haʊ ˈkʌm/",
+    "pos": "phrase",
+    "meaning": "怎么回事？怎么发生的？",
+    "example": "You are not playing today? How come?",
+    "exampleZh": "你今天不参加比赛？怎么回事？",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "seem",
+    "word": "seem",
+    "phonetic": "/siːm/",
+    "pos": "verb",
+    "meaning": "好像；似乎；看来",
+    "example": "You seem tired after the match.",
+    "exampleZh": "比赛后你看起来很累。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "problem",
+    "word": "problem",
+    "phonetic": "/ˈprɒbləm/",
+    "pos": "noun",
+    "meaning": "棘手的问题；难题；困难",
+    "example": "We can solve this problem together.",
+    "exampleZh": "我们可以一起解决这个问题。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "score",
+    "word": "score",
+    "phonetic": "/skɔː(r)/",
+    "pos": "verb",
+    "meaning": "得（分）；进（球）",
+    "example": "Our team hopes to score a goal.",
+    "exampleZh": "我们队希望进一个球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "goal",
+    "word": "goal",
+    "phonetic": "/ɡəʊl/",
+    "pos": "noun",
+    "meaning": "进球得的分；球门；目标",
+    "example": "He kicks the ball into the goal.",
+    "exampleZh": "他把球踢进了球门。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "goalkeeper",
+    "word": "goalkeeper",
+    "phonetic": "/ˈɡəʊlkiːpə(r)/",
+    "pos": "noun",
+    "meaning": "守门员",
+    "example": "The goalkeeper stops the ball.",
+    "exampleZh": "守门员挡住了球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "hold",
+    "word": "hold",
+    "phonetic": "/həʊld/",
+    "pos": "verb",
+    "meaning": "使保持在某位置；拿着；抓住",
+    "example": "Hold the ball with both hands.",
+    "exampleZh": "用双手拿住球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "throw",
+    "word": "throw",
+    "phonetic": "/θrəʊ/",
+    "pos": "verb",
+    "meaning": "投；抛；掷",
+    "example": "Throw the ball to your teammate.",
+    "exampleZh": "把球传给你的队友。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "point",
+    "word": "point",
+    "phonetic": "/pɔɪnt/",
+    "pos": "noun",
+    "meaning": "得分；点",
+    "example": "Our team needs one more point to win.",
+    "exampleZh": "我们队再得一分就能获胜。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "control",
+    "word": "control",
+    "phonetic": "/kənˈtrəʊl/",
+    "pos": "verb & noun",
+    "meaning": "控制；管理",
+    "example": "Try to control the ball with your feet.",
+    "exampleZh": "试着用双脚控制球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "mind",
+    "word": "mind",
+    "phonetic": "/maɪnd/",
+    "pos": "noun & verb",
+    "meaning": "头脑；心智；当心；注意",
+    "example": "Reading is good for your mind.",
+    "exampleZh": "阅读有益于你的头脑。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "powerful",
+    "word": "powerful",
+    "phonetic": "/ˈpaʊəfl/",
+    "pos": "adjective",
+    "meaning": "强有力的",
+    "example": "He gives the ball a powerful kick.",
+    "exampleZh": "他用力踢了一脚球。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "style",
+    "word": "style",
+    "phonetic": "/staɪl/",
+    "pos": "noun",
+    "meaning": "风格；样式",
+    "example": "I like her style of playing tennis.",
+    "exampleZh": "我喜欢她打网球的风格。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "moment",
+    "word": "moment",
+    "phonetic": "/ˈməʊmənt/",
+    "pos": "noun",
+    "meaning": "片刻；瞬间",
+    "example": "Please wait a moment.",
+    "exampleZh": "请稍等片刻。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "report",
+    "word": "report",
+    "phonetic": "/rɪˈpɔːt/",
+    "pos": "verb & noun",
+    "meaning": "汇报；报告；报道",
+    "example": "I write a report about the match.",
+    "exampleZh": "我写了一篇关于这场比赛的报道。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "newspaper",
+    "word": "newspaper",
+    "phonetic": "/ˈnjuːzpeɪpə(r)/",
+    "pos": "noun",
+    "meaning": "报纸",
+    "example": "Grandpa reads a newspaper every morning.",
+    "exampleZh": "爷爷每天早晨读报纸。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "court",
+    "word": "court",
+    "phonetic": "/kɔːt/",
+    "pos": "noun",
+    "meaning": "球场",
+    "example": "The players are on the basketball court.",
+    "exampleZh": "运动员们在篮球场上。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "against",
+    "word": "against",
+    "phonetic": "/əˈɡenst/",
+    "pos": "preposition",
+    "meaning": "与……对阵；与……相反；反对",
+    "example": "Our class will play against Class Three.",
+    "exampleZh": "我们班将与三班比赛。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "shoot",
+    "word": "shoot",
+    "phonetic": "/ʃuːt/",
+    "pos": "verb",
+    "meaning": "射门；投篮",
+    "example": "She can shoot well in basketball.",
+    "exampleZh": "她打篮球时投篮很准。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "basket",
+    "word": "basket",
+    "phonetic": "/ˈbɑːskɪt/",
+    "pos": "noun",
+    "meaning": "（篮球运动的）篮；筐",
+    "example": "He throws the ball into the basket.",
+    "exampleZh": "他把球投进篮筐。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "tie-unit-4",
+    "word": "tie",
+    "phonetic": "/taɪ/",
+    "pos": "verb",
+    "meaning": "（比赛或竞争中）得分相同",
+    "example": "The two teams tie at three points each.",
+    "exampleZh": "两队各得三分，打成平手。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "track",
+    "word": "track",
+    "phonetic": "/træk/",
+    "pos": "noun",
+    "meaning": "（赛跑、赛车等的）跑道",
+    "example": "The runners are waiting on the track.",
+    "exampleZh": "跑步选手们正在跑道上等候。",
+    "unit": "Unit 4"
+  },
+  {
+    "id": "amazing",
+    "word": "amazing",
+    "phonetic": "/əˈmeɪzɪŋ/",
+    "pos": "adjective",
+    "meaning": "令人大为惊奇的；令人惊喜或惊叹的",
+    "example": "The horse can do an amazing trick.",
+    "exampleZh": "这匹马会表演一个令人惊叹的把戏。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "website",
+    "word": "website",
+    "phonetic": "/ˈwebsaɪt/",
+    "pos": "noun",
+    "meaning": "网站",
+    "example": "This website has pictures of farm animals.",
+    "exampleZh": "这个网站上有农场动物的图片。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "feed",
+    "word": "feed",
+    "phonetic": "/fiːd/",
+    "pos": "verb",
+    "meaning": "给（人或动物）食物；喂养",
+    "example": "We feed the chickens every morning.",
+    "exampleZh": "我们每天早晨喂鸡。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "herd",
+    "word": "herd",
+    "phonetic": "/hɜːd/",
+    "pos": "verb",
+    "meaning": "放牧（牲畜、兽群）",
+    "example": "The farmer uses a dog to herd the sheep.",
+    "exampleZh": "农民用一只狗来赶羊。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "goat",
+    "word": "goat",
+    "phonetic": "/ɡəʊt/",
+    "pos": "noun",
+    "meaning": "山羊",
+    "example": "The goat is eating grass.",
+    "exampleZh": "山羊正在吃草。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "remember",
+    "word": "remember",
+    "phonetic": "/rɪˈmembə(r)/",
+    "pos": "verb",
+    "meaning": "记得；记起",
+    "example": "Remember to close the gate.",
+    "exampleZh": "记得关上大门。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "collect",
+    "word": "collect",
+    "phonetic": "/kəˈlekt/",
+    "pos": "verb",
+    "meaning": "收集；采集",
+    "example": "We collect eggs on the farm.",
+    "exampleZh": "我们在农场收鸡蛋。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "recognise",
+    "word": "recognise",
+    "phonetic": "/ˈrekəɡnaɪz/",
+    "pos": "verb",
+    "meaning": "识别；认出（美式拼写 recognize）",
+    "example": "I can recognise my dog in the photo.",
+    "exampleZh": "我能在照片中认出我的狗。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "care",
+    "word": "care",
+    "phonetic": "/keə(r)/",
+    "pos": "noun",
+    "meaning": "照顾；照看",
+    "example": "Farm animals need good care.",
+    "exampleZh": "农场动物需要细心照料。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "take-care-of",
+    "word": "take care of",
+    "phonetic": "/teɪk ˈkeər əv/",
+    "pos": "phrase",
+    "meaning": "照顾；照料",
+    "example": "I help take care of the rabbits.",
+    "exampleZh": "我帮忙照料兔子。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "prefer",
+    "word": "prefer",
+    "phonetic": "/prɪˈfɜː(r)/",
+    "pos": "verb",
+    "meaning": "较喜欢；喜欢……多于……",
+    "example": "I prefer cats to dogs.",
+    "exampleZh": "比起狗，我更喜欢猫。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "get-along-with",
+    "word": "get along with",
+    "phonetic": "/ɡet əˈlɒŋ wɪð/",
+    "pos": "phrase",
+    "meaning": "和睦相处；关系良好",
+    "example": "I get along with my classmates.",
+    "exampleZh": "我和同学们相处融洽。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "sign",
+    "word": "sign",
+    "phonetic": "/saɪn/",
+    "pos": "noun",
+    "meaning": "标牌；指示牌",
+    "example": "Read the sign before you enter.",
+    "exampleZh": "进去之前先看一下指示牌。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "bite",
+    "word": "bite",
+    "phonetic": "/baɪt/",
+    "pos": "verb & noun",
+    "meaning": "咬；咬下的一口",
+    "example": "Be careful! That dog may bite.",
+    "exampleZh": "小心！那只狗可能会咬人。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "warning",
+    "word": "warning",
+    "phonetic": "/ˈwɔːnɪŋ/",
+    "pos": "noun",
+    "meaning": "警告；警示",
+    "example": "The sign gives a warning about the dog.",
+    "exampleZh": "这块标牌提醒人们当心那只狗。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "peck",
+    "word": "peck",
+    "phonetic": "/pek/",
+    "pos": "verb",
+    "meaning": "啄",
+    "example": "The hens peck at the grain.",
+    "exampleZh": "母鸡们啄食谷粒。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "sweet",
+    "word": "sweet",
+    "phonetic": "/swiːt/",
+    "pos": "adjective & noun",
+    "meaning": "含糖的；甜的；糖果",
+    "example": "This apple tastes sweet.",
+    "exampleZh": "这个苹果尝起来很甜。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "calf",
+    "word": "calf",
+    "phonetic": "/kɑːf/",
+    "pos": "noun",
+    "meaning": "小牛；牛犊",
+    "example": "The calf stays close to its mother.",
+    "exampleZh": "小牛紧挨着妈妈。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "loud",
+    "word": "loud",
+    "phonetic": "/laʊd/",
+    "pos": "adjective",
+    "meaning": "大声的；喧闹的",
+    "example": "We hear a loud noise from the yard.",
+    "exampleZh": "我们听到院子里传来很大的声响。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "noise",
+    "word": "noise",
+    "phonetic": "/nɔɪz/",
+    "pos": "noun",
+    "meaning": "噪音；响声",
+    "example": "Please do not make too much noise.",
+    "exampleZh": "请不要制造太大的噪音。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "meaning",
+    "word": "meaning",
+    "phonetic": "/ˈmiːnɪŋ/",
+    "pos": "noun",
+    "meaning": "意义；意思",
+    "example": "What is the meaning of this word?",
+    "exampleZh": "这个单词是什么意思？",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "shout",
+    "word": "shout",
+    "phonetic": "/ʃaʊt/",
+    "pos": "verb",
+    "meaning": "大声说；叫",
+    "example": "Please do not shout at the animals.",
+    "exampleZh": "请不要对着动物大喊。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "jacket",
+    "word": "jacket",
+    "phonetic": "/ˈdʒækɪt/",
+    "pos": "noun",
+    "meaning": "夹克衫；短上衣",
+    "example": "Put on your jacket before you go outside.",
+    "exampleZh": "出去前穿上夹克衫。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "if",
+    "word": "if",
+    "phonetic": "/ɪf/",
+    "pos": "conjunction",
+    "meaning": "如果；假若",
+    "example": "We will stay inside if it rains.",
+    "exampleZh": "如果下雨，我们就待在室内。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "snack",
+    "word": "snack",
+    "phonetic": "/snæk/",
+    "pos": "noun",
+    "meaning": "点心；小吃",
+    "example": "I have an apple as a snack.",
+    "exampleZh": "我吃一个苹果当点心。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "could",
+    "word": "could",
+    "phonetic": "/kʊd; kəd/",
+    "pos": "modal verb",
+    "meaning": "（询问是否可以做某事）能；可以",
+    "example": "Could I feed the rabbits?",
+    "exampleZh": "我可以喂兔子吗？",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "hen",
+    "word": "hen",
+    "phonetic": "/hen/",
+    "pos": "noun",
+    "meaning": "母鸡",
+    "example": "The hen lays an egg.",
+    "exampleZh": "母鸡下了一个蛋。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "diary",
+    "word": "diary",
+    "phonetic": "/ˈdaɪəri/",
+    "pos": "noun",
+    "meaning": "日记；日记簿",
+    "example": "I write about the farm in my diary.",
+    "exampleZh": "我在日记里写下了农场的见闻。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "cookie",
+    "word": "cookie",
+    "phonetic": "/ˈkʊki/",
+    "pos": "noun",
+    "meaning": "曲奇饼",
+    "example": "Would you like a cookie?",
+    "exampleZh": "你想吃一块曲奇饼吗？",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "direct",
+    "word": "direct",
+    "phonetic": "/dəˈrekt; daɪˈrekt/",
+    "pos": "verb",
+    "meaning": "指路；领路；指导",
+    "example": "Could you direct us to the farm?",
+    "exampleZh": "你能给我们指一下去农场的路吗？",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "yard",
+    "word": "yard",
+    "phonetic": "/jɑːd/",
+    "pos": "noun",
+    "meaning": "（某种用途的）区域；场地",
+    "example": "The hens are walking around the yard.",
+    "exampleZh": "母鸡们正在院子里走来走去。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "glad",
+    "word": "glad",
+    "phonetic": "/ɡlæd/",
+    "pos": "adjective",
+    "meaning": "高兴；愉快",
+    "example": "I am glad to see you.",
+    "exampleZh": "见到你我很高兴。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "believe",
+    "word": "believe",
+    "phonetic": "/bɪˈliːv/",
+    "pos": "verb",
+    "meaning": "相信",
+    "example": "I believe you can do it.",
+    "exampleZh": "我相信你能做到。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "unforgettable",
+    "word": "unforgettable",
+    "phonetic": "/ˌʌnfəˈɡetəbl/",
+    "pos": "adjective",
+    "meaning": "令人难忘的",
+    "example": "We have an unforgettable day on the farm.",
+    "exampleZh": "我们在农场度过了难忘的一天。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "smooth",
+    "word": "smooth",
+    "phonetic": "/smuːð/",
+    "pos": "adjective",
+    "meaning": "光滑的；平坦的；平整的",
+    "example": "This stone feels smooth.",
+    "exampleZh": "这块石头摸起来很光滑。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "neck",
+    "word": "neck",
+    "phonetic": "/nek/",
+    "pos": "noun",
+    "meaning": "颈；脖子",
+    "example": "The horse has a strong neck.",
+    "exampleZh": "这匹马有粗壮的脖子。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "friendly",
+    "word": "friendly",
+    "phonetic": "/ˈfrendli/",
+    "pos": "adjective",
+    "meaning": "友爱的；友好的",
+    "example": "The farmer is very friendly.",
+    "exampleZh": "这位农民非常友好。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "ride",
+    "word": "ride",
+    "phonetic": "/raɪd/",
+    "pos": "verb & noun",
+    "meaning": "骑马；驾驭；（乘车或骑车的）短途旅程",
+    "example": "I want to ride a horse.",
+    "exampleZh": "我想骑马。",
+    "unit": "Unit 5"
+  },
+  {
+    "id": "around",
+    "word": "around",
+    "phonetic": "/əˈraʊnd/",
+    "pos": "preposition & adverb",
+    "meaning": "在……周围；在周围；大约",
+    "example": "We walk around the lake.",
+    "exampleZh": "我们绕着湖散步。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "vacation",
+    "word": "vacation",
+    "phonetic": "/vəˈkeɪʃn/",
+    "pos": "noun",
+    "meaning": "假期",
+    "example": "We visit the seaside during our summer vacation.",
+    "exampleZh": "我们暑假去海边游玩。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "trip",
+    "word": "trip",
+    "phonetic": "/trɪp/",
+    "pos": "noun",
+    "meaning": "（尤指短程往返的）旅行；旅游；出行",
+    "example": "We take a trip to the mountains.",
+    "exampleZh": "我们去山里旅行。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "popular",
+    "word": "popular",
+    "phonetic": "/ˈpɒpjələ(r)/",
+    "pos": "adjective",
+    "meaning": "大众喜爱的；广受欢迎的；当红的",
+    "example": "This park is popular with children.",
+    "exampleZh": "这个公园很受孩子们欢迎。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "tour",
+    "word": "tour",
+    "phonetic": "/tʊə(r)/",
+    "pos": "noun",
+    "meaning": "旅行；旅游",
+    "example": "We take a tour of the city.",
+    "exampleZh": "我们游览这座城市。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "tip",
+    "word": "tip",
+    "phonetic": "/tɪp/",
+    "pos": "noun",
+    "meaning": "指点；实用的提示",
+    "example": "Here is a useful tip for your trip.",
+    "exampleZh": "这里有一条对你旅行有用的建议。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "footprint",
+    "word": "footprint",
+    "phonetic": "/ˈfʊtprɪnt/",
+    "pos": "noun",
+    "meaning": "脚印；足迹",
+    "example": "I see a footprint in the sand.",
+    "exampleZh": "我在沙地上看到一个脚印。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "hike",
+    "word": "hike",
+    "phonetic": "/haɪk/",
+    "pos": "verb",
+    "meaning": "徒步旅行",
+    "example": "We hike in the hills on Sunday.",
+    "exampleZh": "我们星期日去山里徒步旅行。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "nature",
+    "word": "nature",
+    "phonetic": "/ˈneɪtʃə(r)/",
+    "pos": "noun",
+    "meaning": "大自然",
+    "example": "We enjoy spending time in nature.",
+    "exampleZh": "我们喜欢在大自然中度过时光。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "enjoy",
+    "word": "enjoy",
+    "phonetic": "/ɪnˈdʒɔɪ/",
+    "pos": "verb",
+    "meaning": "享受；欣赏",
+    "example": "I enjoy walking by the sea.",
+    "exampleZh": "我喜欢在海边散步。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "local",
+    "word": "local",
+    "phonetic": "/ˈləʊkl/",
+    "pos": "adjective",
+    "meaning": "当地的",
+    "example": "We try some local food.",
+    "exampleZh": "我们品尝了一些当地食物。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "lazy",
+    "word": "lazy",
+    "phonetic": "/ˈleɪzi/",
+    "pos": "adjective",
+    "meaning": "懒散的；悠闲的",
+    "example": "We spend a lazy afternoon by the lake.",
+    "exampleZh": "我们在湖边度过了一个悠闲的下午。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "roof",
+    "word": "roof",
+    "phonetic": "/ruːf/",
+    "pos": "noun",
+    "meaning": "屋顶；顶部",
+    "example": "There is snow on the roof.",
+    "exampleZh": "屋顶上有积雪。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "ski",
+    "word": "ski",
+    "phonetic": "/skiː/",
+    "pos": "verb",
+    "meaning": "滑雪",
+    "example": "I want to learn to ski.",
+    "exampleZh": "我想学习滑雪。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "reason",
+    "word": "reason",
+    "phonetic": "/ˈriːzn/",
+    "pos": "noun",
+    "meaning": "原因；理由",
+    "example": "What is the reason for your visit?",
+    "exampleZh": "你来访的原因是什么？",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "drive",
+    "word": "drive",
+    "phonetic": "/draɪv/",
+    "pos": "verb",
+    "meaning": "驾驶；开车",
+    "example": "My father can drive us to the station.",
+    "exampleZh": "我爸爸可以开车送我们去车站。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "shall",
+    "word": "shall",
+    "phonetic": "/ʃæl; ʃəl/",
+    "pos": "modal verb",
+    "meaning": "（同 I 和 we 连用，表示将来）将要；将会",
+    "example": "We shall visit the museum tomorrow.",
+    "exampleZh": "我们明天将参观博物馆。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "afraid",
+    "word": "afraid",
+    "phonetic": "/əˈfreɪd/",
+    "pos": "adjective",
+    "meaning": "害怕；畏惧",
+    "example": "My little sister is afraid of the dark.",
+    "exampleZh": "我妹妹怕黑。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "i-m-afraid",
+    "word": "I'm afraid",
+    "phonetic": "/aɪm əˈfreɪd/",
+    "pos": "phrase",
+    "meaning": "我怕；恐怕；很遗憾；对不起",
+    "example": "I'm afraid we are too late.",
+    "exampleZh": "恐怕我们来得太晚了。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "expensive",
+    "word": "expensive",
+    "phonetic": "/ɪkˈspensɪv/",
+    "pos": "adjective",
+    "meaning": "昂贵的；价格高的",
+    "example": "This hotel is too expensive for us.",
+    "exampleZh": "这家旅馆对我们来说太贵了。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "price",
+    "word": "price",
+    "phonetic": "/praɪs/",
+    "pos": "noun",
+    "meaning": "价格；价钱",
+    "example": "What is the price of this ticket?",
+    "exampleZh": "这张票多少钱？",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "ticket",
+    "word": "ticket",
+    "phonetic": "/ˈtɪkɪt/",
+    "pos": "noun",
+    "meaning": "票；入场券",
+    "example": "I buy a train ticket online.",
+    "exampleZh": "我在网上买了一张火车票。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "better",
+    "word": "better",
+    "phonetic": "/ˈbetə(r)/",
+    "pos": "adjective & adverb",
+    "meaning": "较好的；更好的（good 的比较级）；更好（well 的比较级）",
+    "example": "This seat has a better view.",
+    "exampleZh": "这个座位的视野更好。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "convenient",
+    "word": "convenient",
+    "phonetic": "/kənˈviːniənt/",
+    "pos": "adjective",
+    "meaning": "方便的；便利的；省事的",
+    "example": "It is convenient to travel by train.",
+    "exampleZh": "坐火车出行很方便。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "speed",
+    "word": "speed",
+    "phonetic": "/spiːd/",
+    "pos": "noun",
+    "meaning": "速度",
+    "example": "The train travels at a high speed.",
+    "exampleZh": "这列火车行驶速度很快。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "high-speed",
+    "word": "high-speed",
+    "phonetic": "/ˌhaɪ ˈspiːd/",
+    "pos": "adjective",
+    "meaning": "高速的",
+    "example": "We take a high-speed train to Beijing.",
+    "exampleZh": "我们乘高铁去北京。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "comfortable",
+    "word": "comfortable",
+    "phonetic": "/ˈkʌmftəbl/",
+    "pos": "adjective",
+    "meaning": "使人舒服的；舒适的",
+    "example": "The seats on the train are comfortable.",
+    "exampleZh": "火车上的座位很舒适。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "view",
+    "word": "view",
+    "phonetic": "/vjuː/",
+    "pos": "noun",
+    "meaning": "景色；视野；看法",
+    "example": "The view from the mountain is beautiful.",
+    "exampleZh": "从山上望去，景色很美。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "carry",
+    "word": "carry",
+    "phonetic": "/ˈkæri/",
+    "pos": "verb",
+    "meaning": "拿；提；运送；输送",
+    "example": "Let me carry your bag.",
+    "exampleZh": "让我帮你提包吧。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "plan",
+    "word": "plan",
+    "phonetic": "/plæn/",
+    "pos": "noun & verb",
+    "meaning": "计划；打算",
+    "example": "We plan to visit the museum.",
+    "exampleZh": "我们计划参观博物馆。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "own",
+    "word": "own",
+    "phonetic": "/əʊn/",
+    "pos": "adjective & pronoun",
+    "meaning": "自己的；本人的（用于强调）",
+    "example": "I have my own room.",
+    "exampleZh": "我有自己的房间。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "historical",
+    "word": "historical",
+    "phonetic": "/hɪˈstɒrɪkl/",
+    "pos": "adjective",
+    "meaning": "（有关）历史的",
+    "example": "We visit a historical building in the city.",
+    "exampleZh": "我们参观了城里的一座历史建筑。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "such",
+    "word": "such",
+    "phonetic": "/sʌtʃ/",
+    "pos": "determiner & pronoun",
+    "meaning": "这样的；那样的；类似的",
+    "example": "It is such a beautiful day.",
+    "exampleZh": "今天真是美好的一天。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "such-as",
+    "word": "such as",
+    "phonetic": "/ˈsʌtʃ æz/",
+    "pos": "phrase",
+    "meaning": "例如；诸如",
+    "example": "I like outdoor activities such as hiking.",
+    "exampleZh": "我喜欢徒步旅行等户外活动。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "palace",
+    "word": "palace",
+    "phonetic": "/ˈpæləs/",
+    "pos": "noun",
+    "meaning": "宫殿",
+    "example": "The old palace has a beautiful garden.",
+    "exampleZh": "这座古老的宫殿有一个美丽的花园。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "museum",
+    "word": "museum",
+    "phonetic": "/mjuˈziːəm/",
+    "pos": "noun",
+    "meaning": "博物馆",
+    "example": "We learn about history at the museum.",
+    "exampleZh": "我们在博物馆了解历史。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "national",
+    "word": "national",
+    "phonetic": "/ˈnæʃnəl/",
+    "pos": "adjective",
+    "meaning": "国家的；全国的",
+    "example": "We visit a national park during the holiday.",
+    "exampleZh": "我们在假期参观一座国家公园。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "forest",
+    "word": "forest",
+    "phonetic": "/ˈfɒrɪst/",
+    "pos": "noun",
+    "meaning": "森林；林区",
+    "example": "Many animals live in the forest.",
+    "exampleZh": "许多动物生活在森林里。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "mountain",
+    "word": "mountain",
+    "phonetic": "/ˈmaʊntən/",
+    "pos": "noun",
+    "meaning": "山；高山",
+    "example": "There is snow on the top of the mountain.",
+    "exampleZh": "山顶上有积雪。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "postcard",
+    "word": "postcard",
+    "phonetic": "/ˈpəʊstkɑːd/",
+    "pos": "noun",
+    "meaning": "明信片",
+    "example": "I send a postcard to my friend.",
+    "exampleZh": "我给朋友寄了一张明信片。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "volunteer",
+    "word": "volunteer",
+    "phonetic": "/ˌvɒlənˈtɪə(r)/",
+    "pos": "noun",
+    "meaning": "志愿者；义务工作者",
+    "example": "A volunteer helps us find the museum.",
+    "exampleZh": "一位志愿者帮我们找到了博物馆。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "opera",
+    "word": "opera",
+    "phonetic": "/ˈɒprə/",
+    "pos": "noun",
+    "meaning": "歌剧",
+    "example": "We watch an opera at the theatre.",
+    "exampleZh": "我们在剧院看了一场歌剧。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "myself",
+    "word": "myself",
+    "phonetic": "/maɪˈself/",
+    "pos": "pronoun",
+    "meaning": "我自己",
+    "example": "I take a photo of myself by the lake.",
+    "exampleZh": "我在湖边给自己拍了一张照片。",
+    "unit": "Unit 6"
+  },
+  {
+    "id": "enjoy-oneself",
+    "word": "enjoy oneself",
+    "phonetic": "/ɪnˈdʒɔɪ wʌnˈself/",
+    "pos": "phrase",
+    "meaning": "过得快乐；玩得高兴",
+    "example": "We enjoy ourselves at the park.",
+    "exampleZh": "我们在公园玩得很开心。",
+    "unit": "Unit 6"
+  }
+]
