@@ -222,8 +222,16 @@ function renderSpellingQuestion() {
   $("#spelling-feedback").replaceChildren();
   $("#spelling-form").hidden = false;
   $("#spelling-next").hidden = true;
+  const answer = word.word.toLowerCase();
+  const missing = answer.slice(1, -1);
+  $("#spelling-first").textContent = answer[0];
+  $("#spelling-last").textContent = answer.at(-1);
   $("#spelling-input").disabled = false;
   $("#spelling-input").value = "";
+  $("#spelling-input").maxLength = missing.length;
+  $("#spelling-input").placeholder = "_".repeat(missing.length);
+  $("#spelling-input").style.setProperty("--letter-count", missing.length);
+  $("#spelling-input").setAttribute("aria-label", `${answer[0]} 开头、${answer.at(-1)} 结尾，填写中间 ${missing.length} 个字母`);
   $("#spelling-input").focus();
 }
 
@@ -232,11 +240,13 @@ function answerSpelling(event) {
   const spelling = state.spelling;
   if (!spelling || spelling.answered) return;
   const word = spelling.questions[spelling.index];
-  const answer = $("#spelling-input").value.trim().toLowerCase();
-  if (!answer) return;
+  const middle = $("#spelling-input").value.trim().toLowerCase();
+  if (!middle) return;
+  const target = word.word.toLowerCase();
+  const answer = `${target[0]}${middle}${target.at(-1)}`;
 
   spelling.answered = true;
-  const correct = answer === word.word.toLowerCase();
+  const correct = answer === target;
   if (correct) spelling.score += 1;
   recordResult(word.id, correct);
   $("#spelling-input").disabled = true;
