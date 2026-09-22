@@ -95,10 +95,9 @@
               <h3 id="spelling-prompt">准备好挑战拼写了吗？</h3>
               <form id="spelling-form" hidden>
                 <div class="spelling-pattern" aria-label="英文单词拼写提示">
-                  <span id="spelling-first" aria-hidden="true"></span>
-                  <label class="sr-only" for="spelling-input">填写单词中间缺少的字母</label>
-                  <input id="spelling-input" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" />
-                  <span id="spelling-last" aria-hidden="true"></span>
+                  <span class="spelling-edge" id="spelling-first" aria-hidden="true"></span>
+                  <div class="spelling-slots" id="spelling-slots" role="group" aria-label="填写单词中间缺少的字母"></div>
+                  <span class="spelling-edge" id="spelling-last" aria-hidden="true"></span>
                 </div>
                 <button class="primary-button" type="submit">提交答案</button>
               </form>
