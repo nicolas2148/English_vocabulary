@@ -226,13 +226,46 @@ function renderSpellingQuestion() {
   const missing = answer.slice(1, -1);
   $("#spelling-first").textContent = answer[0];
   $("#spelling-last").textContent = answer.at(-1);
-  $("#spelling-input").disabled = false;
-  $("#spelling-input").value = "";
-  $("#spelling-input").maxLength = missing.length;
-  $("#spelling-input").placeholder = "_".repeat(missing.length);
-  $("#spelling-input").style.setProperty("--letter-count", missing.length);
-  $("#spelling-input").setAttribute("aria-label", `${answer[0]} 开头、${answer.at(-1)} 结尾，填写中间 ${missing.length} 个字母`);
-  $("#spelling-input").focus();
+  const slots = $("#spelling-slots");
+  slots.replaceChildren();
+  slots.setAttribute("aria-label", `${answer[0]} 开头、${answer.at(-1)} 结尾，填写中间 ${missing.length} 个字母`);
+  [...missing].forEach((_, index) => {
+    const input = document.createElement("input");
+    input.className = "spelling-letter";
+    input.type = "text";
+    input.inputMode = "text";
+    input.maxLength = 1;
+    input.autocomplete = "off";
+    input.autocapitalize = "none";
+    input.spellcheck = false;
+    input.setAttribute("aria-label", `第 ${index + 1} 个缺失字母，共 ${missing.length} 个`);
+    input.addEventListener("input", () => {
+      input.value = input.value.replace(/[^a-z]/gi, "").slice(-1).toLowerCase();
+      if (input.value) slots.children[index + 1]?.focus();
+    });
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Backspace" && !input.value && index > 0) {
+        event.preventDefault();
+        const previous = slots.children[index - 1];
+        previous.value = "";
+        previous.focus();
+      }
+      if (event.key === "ArrowLeft" && index > 0) slots.children[index - 1].focus();
+      if (event.key === "ArrowRight") slots.children[index + 1]?.focus();
+    });
+    input.addEventListener("paste", (event) => {
+      event.preventDefault();
+      const letters = event.clipboardData.getData("text").replace(/[^a-z]/gi, "").toLowerCase();
+      [...letters].forEach((letter, offset) => {
+        const targetSlot = slots.children[index + offset];
+        if (targetSlot) targetSlot.value = letter;
+      });
+      const nextIndex = Math.min(index + letters.length, slots.children.length - 1);
+      slots.children[nextIndex]?.focus();
+    });
+    slots.append(input);
+  });
+  slots.firstElementChild?.focus();
 }
 
 function answerSpelling(event) {
@@ -240,8 +273,13 @@ function answerSpelling(event) {
   const spelling = state.spelling;
   if (!spelling || spelling.answered) return;
   const word = spelling.questions[spelling.index];
-  const middle = $("#spelling-input").value.trim().toLowerCase();
-  if (!middle) return;
+  const inputs = $$("#spelling-slots .spelling-letter");
+  const firstEmpty = inputs.find((input) => !input.value);
+  if (firstEmpty) {
+    firstEmpty.focus();
+    return;
+  }
+  const middle = inputs.map((input) => input.value).join("").toLowerCase();
   const target = word.word.toLowerCase();
   const answer = `${target[0]}${middle}${target.at(-1)}`;
 
@@ -249,7 +287,7 @@ function answerSpelling(event) {
   const correct = answer === target;
   if (correct) spelling.score += 1;
   recordResult(word.id, correct);
-  $("#spelling-input").disabled = true;
+  inputs.forEach((input) => { input.disabled = true; });
   $("#spelling-next").hidden = false;
 
   const result = document.createElement("p");
