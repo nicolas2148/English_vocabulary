@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b3b49" />
+    <meta name="description" content="适合初中生在 iPad 和 iPhone 上使用的英语背单词 Web App。" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b3b49'/%3E%3Cpath d='M18 17h21a8 8 0 0 1 8 8v22H26a8 8 0 0 0-8 0V17Z' fill='%23ffd166'/%3E%3Cpath d='M26 17v30' stroke='%23fff' stroke-width='4'/%3E%3C/svg%3E" />
+    <title>词光 · 英语学习</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#study" aria-label="词光首页">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span><strong>词光</strong><small>Word Spark</small></span>
+        </a>
+        <div class="streak" aria-label="连续学习天数">
+          <span aria-hidden="true">🔥</span>
+          <strong id="streak-count">0</strong>
+          <span>天连续学习</span>
+        </div>
+      </header>
+
+      <main class="app-layout">
+        <aside class="side-panel" aria-label="学习概览">
+          <p class="eyebrow">今日计划</p>
+          <h1>每天进步<br /><em>一点点</em></h1>
+          <div class="ring-wrap">
+            <div class="progress-ring" id="daily-ring" style="--progress: 0">
+              <div><strong id="today-count">0</strong><span>/ 20</span></div>
+            </div>
+            <p>今日已学习</p>
+          </div>
+          <div class="mini-stats">
+            <div><span>已掌握</span><strong id="mastered-count">0</strong></div>
+            <div><span>待复习</span><strong id="review-count">0</strong></div>
+          </div>
+          <p class="local-note">学习记录只保存在这台设备中，更新词库不会覆盖进度。</p>
+        </aside>
+
+        <section class="workspace">
+          <nav class="mode-tabs" aria-label="功能切换">
+            <button class="tab is-active" data-view="study" aria-selected="true">今日学习</button>
+            <button class="tab" data-view="quiz" aria-selected="false">小测验</button>
+            <button class="tab" data-view="progress" aria-selected="false">学习记录</button>
+          </nav>
+
+          <section class="view is-active" id="study-view" aria-labelledby="study-heading">
+            <div class="view-heading">
+              <div><p class="eyebrow">七年级 · 示例词库</p><h2 id="study-heading">今天的单词</h2></div>
+              <span id="word-position" class="position">1 / 20</span>
+            </div>
+            <div class="word-card" id="word-card">
+              <div class="word-meta"><span id="word-unit">Unit 1</span><span id="word-pos">noun</span></div>
+              <button class="sound-button" id="speak-button" aria-label="朗读当前单词">♪</button>
+              <p class="word" id="word-text">loading</p>
+              <p class="phonetic" id="word-phonetic">/ˈləʊdɪŋ/</p>
+              <div class="answer" id="word-answer" hidden>
+                <span class="answer-rule"></span>
+                <strong id="word-meaning">正在加载词库…</strong>
+                <p id="word-example"></p>
+                <small id="word-example-zh"></small>
+              </div>
+              <button class="primary-button" id="reveal-button">查看释义</button>
+              <div class="decision-buttons" id="decision-buttons" hidden>
+                <button class="secondary-button" data-result="again">还要练习</button>
+                <button class="primary-button" data-result="known">我记住了</button>
+              </div>
+            </div>
+            <p class="keyboard-hint">键盘操作：空格查看释义，← 还要练习，→ 我记住了</p>
+          </section>
+
+          <section class="view" id="quiz-view" aria-labelledby="quiz-heading" hidden>
+            <div class="view-heading">
+              <div><p class="eyebrow">中英双向练习</p><h2 id="quiz-heading">10 题小测验</h2></div>
+              <span id="quiz-position" class="position">准备开始</span>
+            </div>
+            <div class="quiz-card" id="quiz-card">
+              <p class="quiz-direction" id="quiz-direction">系统会随机出题，并自动记录错词。</p>
+              <h3 id="quiz-prompt">检验一下今天的成果</h3>
+              <div id="quiz-options" class="quiz-options"></div>
+              <p id="quiz-feedback" class="quiz-feedback" aria-live="polite"></p>
+              <button class="primary-button" id="quiz-start">开始测验</button>
+            </div>
+          </section>
+
+          <section class="view" id="progress-view" aria-labelledby="progress-heading" hidden>
+            <div class="view-heading">
+              <div><p class="eyebrow">保存在本机</p><h2 id="progress-heading">学习记录</h2></div>
+            </div>
+            <div class="progress-grid">
+              <article><span>已接触单词</span><strong id="seen-total">0</strong><small>共 20 个</small></article>
+              <article><span>已经掌握</span><strong id="mastered-total">0</strong><small>答对 2 次以上</small></article>
+              <article><span>错词数量</span><strong id="wrong-total">0</strong><small>建议优先复习</small></article>
+            </div>
+            <div class="wrong-list-card">
+              <div><h3>需要再练的单词</h3><p>做错或点过“还要练习”的单词会出现在这里。</p></div>
+              <div id="wrong-list" class="wrong-list"></div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <noscript>请开启 JavaScript 后使用词光。</noscript>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+
