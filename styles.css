@@ -141,17 +141,19 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--sun); outline-o
 .spelling-card h3 { margin: 28px 0; font-size: clamp(30px, 6vw, 48px); line-height: 1.25; color: var(--deep); }
 #spelling-form { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 16px; }
 .spelling-pattern {
-  display: inline-flex; align-items: center; justify-content: center; min-height: 64px; padding: 8px 18px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 64px; padding: 8px 18px;
   border: 2px solid var(--line); border-radius: 16px; background: var(--paper); color: var(--deep);
-  font: 700 clamp(28px, 5vw, 38px)/1 Georgia, serif; letter-spacing: .08em;
+  font: 700 clamp(28px, 5vw, 38px)/1 Georgia, serif;
 }
-#spelling-input {
-  width: max(74px, calc(var(--letter-count, 3) * 1.35em)); min-height: 46px; border: 0; border-bottom: 3px solid var(--teal);
-  border-radius: 0; padding: 0 4px; color: var(--deep); background: transparent;
-  font: inherit; letter-spacing: .08em; text-align: center;
+.spelling-edge { min-width: .7em; text-align: center; }
+.spelling-slots { display: inline-flex; align-items: center; gap: 5px; }
+.spelling-letter {
+  width: clamp(24px, 5vw, 32px); min-height: 48px; border: 0; border-bottom: 3px solid var(--teal);
+  border-radius: 0; padding: 0 2px; color: var(--deep); background: transparent;
+  font: inherit; text-align: center; caret-color: var(--teal);
 }
-#spelling-input::placeholder { color: #8aa4a3; opacity: 1; letter-spacing: .12em; }
-#spelling-input:focus { border-color: var(--teal); outline: 3px solid rgba(15, 123, 120, .14); outline-offset: 3px; }
+.spelling-letter:focus { border-color: var(--teal); background: rgba(15, 123, 120, .07); outline: 2px solid rgba(15, 123, 120, .18); outline-offset: 2px; }
+.spelling-letter:disabled { color: var(--deep); opacity: 1; -webkit-text-fill-color: var(--deep); }
 .spelling-feedback { min-height: 94px; display: grid; place-items: center; margin-top: 20px; }
 .spelling-result { margin: 0; font-weight: 800; }
 .spelling-result strong { display: block; font-size: 20px; }
