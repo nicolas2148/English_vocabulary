@@ -1,0 +1,15 @@
+{
+  "name": "词光 · 英语学习",
+  "short_name": "词光",
+  "description": "适合初中生的英语背单词 Web App",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eaf3ef",
+  "theme_color": "#0b3b49",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
+
