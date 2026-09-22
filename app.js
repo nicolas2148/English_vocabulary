@@ -1,6 +1,7 @@
 const STORAGE_KEY = "word-spark-progress-v1";
 const state = {
   words: [], currentIndex: 0, revealed: false, activeView: "study",
+  studyWords: [], reviewMode: false,
   progress: loadProgress(), quiz: null, spelling: null,
 };
 
@@ -33,13 +34,29 @@ function saveProgress() {
 }
 
 function getWordProgress(id) {
-  return state.progress.words[id] || { seen: 0, correct: 0, wrong: 0 };
+  const item = state.progress.words[id] || { seen: 0, correct: 0, wrong: 0 };
+  if (typeof item.needsReview !== "boolean") item.needsReview = item.wrong > 0;
+  if (typeof item.reviewQuizPassed !== "boolean") item.reviewQuizPassed = false;
+  if (typeof item.reviewSpellingPassed !== "boolean") item.reviewSpellingPassed = false;
+  return item;
 }
 
-function recordResult(id, correct) {
+function recordResult(id, correct, source = "study") {
   const item = getWordProgress(id);
   item.seen += 1;
   item[correct ? "correct" : "wrong"] += 1;
+  if (!correct) {
+    item.needsReview = true;
+    item.reviewQuizPassed = false;
+    item.reviewSpellingPassed = false;
+  } else if (item.needsReview && source === "quiz") {
+    item.reviewQuizPassed = true;
+  } else if (item.needsReview && source === "spelling") {
+    item.reviewSpellingPassed = true;
+  }
+  if (item.needsReview && item.reviewQuizPassed && item.reviewSpellingPassed) {
+    item.needsReview = false;
+  }
   item.lastStudied = todayKey();
   state.progress.words[id] = item;
   const key = todayKey();
@@ -61,9 +78,9 @@ function consecutiveDays() {
 }
 
 function updateStats() {
-  const entries = Object.values(state.progress.words);
+  const entries = Object.keys(state.progress.words).map((id) => getWordProgress(id));
   const mastered = entries.filter((item) => item.correct >= 2 && item.correct > item.wrong).length;
-  const review = entries.filter((item) => item.wrong > 0 && item.correct < 2).length;
+  const review = entries.filter((item) => item.needsReview).length;
   const today = (state.progress.daily[todayKey()] || []).length;
   $("#streak-count").textContent = consecutiveDays();
   $("#today-count").textContent = today;
@@ -72,15 +89,26 @@ function updateStats() {
   $("#daily-ring").style.setProperty("--progress", Math.min(100, (today / 20) * 100));
   $("#seen-total").textContent = entries.filter((item) => item.seen > 0).length;
   $("#mastered-total").textContent = mastered;
-  $("#wrong-total").textContent = entries.filter((item) => item.wrong > 0).length;
+  $("#wrong-total").textContent = review;
   renderWrongList();
 }
 
+function getReviewWords() {
+  return state.words.filter((word) => getWordProgress(word.id).needsReview);
+}
+
+function currentStudyWords() {
+  return state.studyWords.length ? state.studyWords : state.words;
+}
+
 function renderWord() {
-  const word = state.words[state.currentIndex];
+  const words = currentStudyWords();
+  const word = words[state.currentIndex];
   if (!word) return;
   state.revealed = false;
-  $("#word-position").textContent = `${state.currentIndex + 1} / ${state.words.length}`;
+  $("#study-eyebrow").textContent = state.reviewMode ? "错词专项复习" : "七年级 · 示例词库";
+  $("#study-heading").textContent = state.reviewMode ? "再次练习" : "今天的单词";
+  $("#word-position").textContent = `${state.currentIndex + 1} / ${words.length}`;
   $("#word-unit").textContent = word.unit;
   $("#word-pos").textContent = word.pos;
   $("#word-text").textContent = word.word;
@@ -91,6 +119,7 @@ function renderWord() {
   $("#word-answer").hidden = true;
   $("#reveal-button").hidden = false;
   $("#decision-buttons").hidden = true;
+  speakWord(word.word);
 }
 
 function revealWord() {
@@ -101,21 +130,34 @@ function revealWord() {
 }
 
 function answerStudy(correct) {
-  recordResult(state.words[state.currentIndex].id, correct);
-  state.currentIndex = (state.currentIndex + 1) % state.words.length;
+  const words = currentStudyWords();
+  recordResult(words[state.currentIndex].id, correct, "study");
+  state.currentIndex = (state.currentIndex + 1) % words.length;
   renderWord();
 }
 
-function speakCurrentWord() {
+function speakWord(text) {
   if (!("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(state.words[state.currentIndex].word);
+  const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-US";
   utterance.rate = 0.82;
   window.speechSynthesis.speak(utterance);
 }
 
+function speakCurrentWord() {
+  const word = currentStudyWords()[state.currentIndex];
+  if (word) speakWord(word.word);
+}
+
 function switchView(view) {
+  const previousView = state.activeView;
+  if (view === "study" && previousView !== "study" && state.reviewMode) {
+    const reviewWords = getReviewWords();
+    state.studyWords = reviewWords.length ? reviewWords : state.words;
+    state.reviewMode = reviewWords.length > 0;
+    state.currentIndex = 0;
+  }
   state.activeView = view;
   $$(".tab").forEach((button) => {
     const active = button.dataset.view === view;
@@ -128,6 +170,7 @@ function switchView(view) {
     section.classList.toggle("is-active", active);
   });
   if (view === "progress") updateStats();
+  if (view === "study" && previousView !== "study") renderWord();
 }
 
 function shuffled(items) {
@@ -135,8 +178,10 @@ function shuffled(items) {
 }
 
 function startQuiz() {
-  const selected = shuffled(state.words).slice(0, Math.min(10, state.words.length));
+  const reviewWords = getReviewWords();
+  const selected = reviewWords.length ? shuffled(reviewWords) : shuffled(state.words).slice(0, Math.min(10, state.words.length));
   state.quiz = { questions: selected, index: 0, score: 0, locked: false };
+  $("#quiz-heading").textContent = `${selected.length} 题认一认`;
   $("#quiz-start").hidden = true;
   renderQuizQuestion();
 }
@@ -154,7 +199,9 @@ function renderQuizQuestion() {
     $("#quiz-direction").textContent = "测验完成";
     $("#quiz-prompt").textContent = `答对 ${quiz.score} / ${quiz.questions.length}`;
     $("#quiz-options").replaceChildren();
-    $("#quiz-feedback").textContent = quiz.score >= 8 ? "很棒，今天的单词掌握得不错！" : "再复习一轮，下一次会更好。";
+    $("#quiz-feedback").textContent = quiz.score >= Math.ceil(quiz.questions.length * 0.8)
+      ? "很棒，今天的单词掌握得不错！"
+      : "再复习一轮，下一次会更好。";
     $("#quiz-start").textContent = "再测一次";
     $("#quiz-start").hidden = false;
     $("#quiz-position").textContent = "已完成";
@@ -183,7 +230,7 @@ function answerQuiz(button, chosen, answer) {
   const word = quiz.questions[quiz.index];
   const correct = chosen === answer;
   if (correct) quiz.score += 1;
-  recordResult(word.id, correct);
+  recordResult(word.id, correct, "quiz");
   button.classList.add(correct ? "correct" : "wrong");
   $$("#quiz-options button").forEach((option) => {
     option.disabled = true;
@@ -194,8 +241,10 @@ function answerQuiz(button, chosen, answer) {
 }
 
 function startSpelling() {
-  const selected = shuffled(state.words).slice(0, Math.min(10, state.words.length));
+  const reviewWords = getReviewWords();
+  const selected = reviewWords.length ? shuffled(reviewWords) : shuffled(state.words).slice(0, Math.min(10, state.words.length));
   state.spelling = { questions: selected, index: 0, score: 0, answered: false };
+  $("#spelling-heading").textContent = `${selected.length} 题拼一拼`;
   $("#spelling-start").hidden = true;
   renderSpellingQuestion();
 }
@@ -286,7 +335,7 @@ function answerSpelling(event) {
   spelling.answered = true;
   const correct = answer === target;
   if (correct) spelling.score += 1;
-  recordResult(word.id, correct);
+  recordResult(word.id, correct, "spelling");
   inputs.forEach((input) => { input.disabled = true; });
   $("#spelling-next").hidden = false;
 
@@ -316,7 +365,8 @@ function nextSpellingQuestion() {
 function renderWrongList() {
   const container = $("#wrong-list");
   if (!container || !state.words.length) return;
-  const words = state.words.filter((word) => getWordProgress(word.id).wrong > 0);
+  const words = getReviewWords();
+  $("#review-again").hidden = !words.length;
   if (!words.length) {
     const empty = document.createElement("span");
     empty.className = "empty";
@@ -331,6 +381,15 @@ function renderWrongList() {
   }));
 }
 
+function startReviewSession() {
+  const words = getReviewWords();
+  if (!words.length) return;
+  state.studyWords = words;
+  state.reviewMode = true;
+  state.currentIndex = 0;
+  switchView("study");
+}
+
 function registerWebMCP() {
   const context = document.modelContext;
   if (!context?.registerTool) return;
@@ -341,11 +400,11 @@ function registerWebMCP() {
     inputSchema: { type: "object", properties: {}, additionalProperties: false },
     annotations: { readOnlyHint: true, untrustedContentHint: false },
     execute() {
-      const entries = Object.values(state.progress.words);
+      const entries = Object.keys(state.progress.words).map((id) => getWordProgress(id));
       return {
         seen: entries.filter((item) => item.seen > 0).length,
         mastered: entries.filter((item) => item.correct >= 2 && item.correct > item.wrong).length,
-        needsReview: entries.filter((item) => item.wrong > 0 && item.correct < 2).length,
+        needsReview: entries.filter((item) => item.needsReview).length,
         totalWords: state.words.length,
       };
     },
@@ -356,6 +415,7 @@ async function init() {
   const response = await fetch("./data/words.json");
   if (!response.ok) throw new Error("词库加载失败");
   state.words = await response.json();
+  state.studyWords = state.words;
   renderWord();
   updateStats();
   registerWebMCP();
@@ -368,6 +428,7 @@ async function init() {
   $("#spelling-start").addEventListener("click", startSpelling);
   $("#spelling-form").addEventListener("submit", answerSpelling);
   $("#spelling-next").addEventListener("click", nextSpellingQuestion);
+  $("#review-again").addEventListener("click", startReviewSession);
 
   document.addEventListener("keydown", (event) => {
     if (state.activeView !== "study" || event.target.matches("button, input")) return;
