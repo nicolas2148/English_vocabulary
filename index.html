@@ -91,11 +91,15 @@
               <span id="spelling-position" class="position">准备开始</span>
             </div>
             <div class="spelling-card">
-              <p class="spelling-label" id="spelling-label">根据中文释义，输入对应的英文单词。</p>
+              <p class="spelling-label" id="spelling-label">根据中文释义和首尾字母，补全中间的字母。</p>
               <h3 id="spelling-prompt">准备好挑战拼写了吗？</h3>
               <form id="spelling-form" hidden>
-                <label class="sr-only" for="spelling-input">输入英文单词</label>
-                <input id="spelling-input" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="在这里输入英文" />
+                <div class="spelling-pattern" aria-label="英文单词拼写提示">
+                  <span id="spelling-first" aria-hidden="true"></span>
+                  <label class="sr-only" for="spelling-input">填写单词中间缺少的字母</label>
+                  <input id="spelling-input" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" />
+                  <span id="spelling-last" aria-hidden="true"></span>
+                </div>
                 <button class="primary-button" type="submit">提交答案</button>
               </form>
               <div id="spelling-feedback" class="spelling-feedback" aria-live="polite"></div>
