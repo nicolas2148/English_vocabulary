@@ -85,9 +85,10 @@ function updateStats() {
   const today = (state.progress.daily[todayKey()] || []).filter((id) => selectedIds.has(id)).length;
   $("#streak-count").textContent = consecutiveDays();
   $("#today-count").textContent = today;
+  $("#task-total").textContent = `/ ${state.taskWords.length}`;
   $("#mastered-count").textContent = mastered;
   $("#review-count").textContent = review;
-  $("#daily-ring").style.setProperty("--progress", Math.min(100, (today / 20) * 100));
+  $("#daily-ring").style.setProperty("--progress", state.taskWords.length ? Math.min(100, (today / state.taskWords.length) * 100) : 0);
   $("#seen-total").textContent = entries.filter((item) => item.seen > 0).length;
   $("#mastered-total").textContent = mastered;
   $("#wrong-total").textContent = review;
@@ -137,30 +138,16 @@ function answerStudy(correct) {
   renderWord();
 }
 
-const VOICE_KEY = "word-spark-voice-v1";
 let englishVoices = [];
-let preferredVoice = "";
 let currentUtterance = null;
-try { preferredVoice = localStorage.getItem(VOICE_KEY) || ""; } catch {}
 
 function refreshVoices() {
-  if (!("speechSynthesis" in window)) {
-    $("#voice-status").textContent = "当前浏览器不支持朗读。";
-    $("#voice-select").disabled = true;
-    $("#test-voice").disabled = true;
-    return;
-  }
+  if (!("speechSynthesis" in window)) return;
   const quality = (voice) => (/^en[-_]GB$/i.test(voice.lang) ? 100 : 0)
     + (/premium|enhanced|natural|neural/i.test(voice.name) ? 10 : 0);
   englishVoices = window.speechSynthesis.getVoices()
     .filter((voice) => /^en(?:[-_]|$)/i.test(voice.lang))
     .sort((a, b) => quality(b) - quality(a));
-  const select = $("#voice-select");
-  select.replaceChildren(new Option("自动选择（优先英式）", ""));
-  englishVoices.forEach((voice) => select.add(new Option(`${voice.name} · ${voice.lang}`, voice.voiceURI)));
-  select.value = englishVoices.some((voice) => voice.voiceURI === preferredVoice) ? preferredVoice : "";
-  const voice = englishVoices.find((item) => item.voiceURI === preferredVoice) || englishVoices[0];
-  $("#voice-status").textContent = voice ? `当前：${voice.name}（${voice.lang}）` : "使用设备默认英式英语语音。";
 }
 
 function speakWord(text) {
@@ -170,7 +157,7 @@ function speakWord(text) {
     window.speechSynthesis.cancel();
     const spokenText = text === "ICT" ? "I C T" : text;
     const utterance = new SpeechSynthesisUtterance(spokenText);
-    const voice = englishVoices.find((item) => item.voiceURI === preferredVoice) || englishVoices[0];
+    const voice = englishVoices[0];
     if (voice) utterance.voice = voice;
     utterance.lang = voice?.lang || "en-GB";
     utterance.rate = 0.95;
@@ -179,14 +166,13 @@ function speakWord(text) {
     utterance.onend = () => { if (currentUtterance === utterance) currentUtterance = null; };
     utterance.onerror = (event) => {
       if (!["canceled", "interrupted"].includes(event.error)) {
-        $("#voice-status").textContent = "朗读未能启动，请点击音符重试或选择另一种英语语音。";
+        console.warn("朗读未能启动", event.error);
       }
       if (currentUtterance === utterance) currentUtterance = null;
     };
     window.speechSynthesis.speak(utterance);
   } catch (error) {
     console.warn("朗读失败", error);
-    $("#voice-status").textContent = "朗读暂不可用，可继续练习或更换英语语音。";
   }
 }
 
@@ -574,12 +560,6 @@ async function init() {
   $("#clear-units").addEventListener("click", () => { $$("#unit-options input").forEach((input) => { input.checked = false; }); updateUnitSummary(); });
   $("#change-units").addEventListener("click", showUnitPicker);
   $("#cancel-units").addEventListener("click", () => { $("#unit-picker").hidden = true; $("#learning-app").hidden = false; });
-  $("#voice-select").addEventListener("change", (event) => {
-    preferredVoice = event.target.value;
-    try { localStorage.setItem(VOICE_KEY, preferredVoice); } catch {}
-    speakCurrentWord();
-  });
-  $("#test-voice").addEventListener("click", speakCurrentWord);
   $$(".tab").forEach((button) => button.addEventListener("click", () => switchView(button.dataset.view)));
   $("#reveal-button").addEventListener("click", revealWord);
   $("#speak-button").addEventListener("click", speakCurrentWord);

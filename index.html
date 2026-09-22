@@ -8,7 +8,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b3b49'/%3E%3Cpath d='M18 17h21a8 8 0 0 1 8 8v22H26a8 8 0 0 0-8 0V17Z' fill='%23ffd166'/%3E%3Cpath d='M26 17v30' stroke='%23fff' stroke-width='4'/%3E%3C/svg%3E" />
     <title>词光 · 英语学习</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260922-3" />
   </head>
   <body>
     <div class="page-shell">
@@ -42,7 +42,7 @@
           <h1>每天进步<br /><em>一点点</em></h1>
           <div class="ring-wrap">
             <div class="progress-ring" id="daily-ring" style="--progress: 0">
-              <div><strong id="today-count">0</strong><span>/ 20</span></div>
+              <div><strong id="today-count">0</strong><span id="task-total">/ 0</span></div>
             </div>
             <p>今日已学习</p>
           </div>
@@ -55,7 +55,6 @@
 
         <section class="workspace">
           <div class="task-toolbar"><p id="task-summary"></p><button id="change-units" class="secondary-button" type="button">更换单元</button></div>
-          <div class="voice-settings"><label for="voice-select">朗读声音</label><select id="voice-select" aria-describedby="voice-status"><option value="">自动选择英语语音</option></select><button id="test-voice" class="secondary-button" type="button">试听</button><small id="voice-status" role="status"></small></div>
           <nav class="mode-tabs" aria-label="功能切换">
             <button class="tab is-active" data-view="study" aria-selected="true">学习任务</button>
             <button class="tab" data-view="quiz" aria-selected="false">认一认</button>
@@ -145,7 +144,7 @@
       </main>
     </div>
     <noscript>请开启 JavaScript 后使用词光。</noscript>
-    <script src="./app.js" defer></script>
+    <script src="./app.js?v=20260922-3" defer></script>
   </body>
 </html>
 
