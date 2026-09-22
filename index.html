@@ -21,7 +21,22 @@
         </div>
       </header>
 
-      <main class="app-layout">
+      <section id="unit-picker" class="unit-picker" aria-labelledby="unit-heading">
+        <p class="eyebrow">先选单元，再开始练习</p>
+        <h1 id="unit-heading">今天想练哪些 Unit？</h1>
+        <p class="unit-intro">可选择一个或多个单元。学习任务、认一认和拼一拼都会使用你选择的词汇。</p>
+        <p id="load-status" role="status">正在加载词库…</p>
+        <form id="unit-form" hidden>
+          <fieldset class="unit-fieldset">
+            <legend class="sr-only">选择练习单元</legend>
+            <div id="unit-options" class="unit-options"></div>
+          </fieldset>
+          <div class="unit-tools"><button type="button" id="select-all" class="secondary-button">全选</button><button type="button" id="clear-units" class="secondary-button">清空选择</button></div>
+          <p id="unit-summary" role="status" aria-live="polite"></p>
+          <div class="unit-actions"><button class="primary-button" id="start-task" type="submit" disabled>开始学习任务</button><button class="secondary-button" id="cancel-units" type="button" hidden>返回当前任务</button></div>
+        </form>
+      </section>
+      <main class="app-layout" id="learning-app" hidden>
         <aside class="side-panel" aria-label="学习概览">
           <p class="eyebrow">今日计划</p>
           <h1>每天进步<br /><em>一点点</em></h1>
@@ -39,8 +54,10 @@
         </aside>
 
         <section class="workspace">
+          <div class="task-toolbar"><p id="task-summary"></p><button id="change-units" class="secondary-button" type="button">更换单元</button></div>
+          <div class="voice-settings"><label for="voice-select">朗读声音</label><select id="voice-select" aria-describedby="voice-status"><option value="">自动选择英语语音</option></select><button id="test-voice" class="secondary-button" type="button">试听</button><small id="voice-status" role="status"></small></div>
           <nav class="mode-tabs" aria-label="功能切换">
-            <button class="tab is-active" data-view="study" aria-selected="true">今日学习</button>
+            <button class="tab is-active" data-view="study" aria-selected="true">学习任务</button>
             <button class="tab" data-view="quiz" aria-selected="false">认一认</button>
             <button class="tab" data-view="spelling" aria-selected="false">拼一拼</button>
             <button class="tab" data-view="progress" aria-selected="false">学习记录</button>
@@ -48,8 +65,8 @@
 
           <section class="view is-active" id="study-view" aria-labelledby="study-heading">
             <div class="view-heading">
-              <div><p class="eyebrow" id="study-eyebrow">七年级 · 示例词库</p><h2 id="study-heading">今天的单词</h2></div>
-              <span id="word-position" class="position">1 / 20</span>
+              <div><p class="eyebrow" id="study-eyebrow">预备年级 · 单元词库</p><h2 id="study-heading">所选单元的单词</h2></div>
+              <span id="word-position" class="position">—</span>
             </div>
             <div class="word-card" id="word-card">
               <div class="word-meta"><span id="word-unit">Unit 1</span><span id="word-pos">noun</span></div>
@@ -112,12 +129,12 @@
               <div><p class="eyebrow">保存在本机</p><h2 id="progress-heading">学习记录</h2></div>
             </div>
             <div class="progress-grid">
-              <article><span>已接触单词</span><strong id="seen-total">0</strong><small>共 20 个</small></article>
+              <article><span>已接触单词</span><strong id="seen-total">0</strong><small id="word-total">所选单元共 0 个</small></article>
               <article><span>已经掌握</span><strong id="mastered-total">0</strong><small>答对 2 次以上</small></article>
               <article><span>错词数量</span><strong id="wrong-total">0</strong><small>建议优先复习</small></article>
             </div>
             <div class="wrong-list-card">
-              <div><h3>需要再练的单词</h3><p>做错或点过“还要练习”的单词会出现在这里。</p></div>
+              <div><h3>需要再练的单词</h3><p>所选单元中做错或点过“还要练习”的单词会出现在这里。</p></div>
               <div class="wrong-list-actions">
                 <div id="wrong-list" class="wrong-list"></div>
                 <button class="primary-button" id="review-again" hidden>再次练习</button>

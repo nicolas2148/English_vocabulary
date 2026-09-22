@@ -1,4 +1,4 @@
-const CACHE = "word-spark-v1";
+const CACHE = "word-spark-v2-units";
 const ASSETS = ["./", "./index.html", "./styles.css", "./app.js", "./data/words.json", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (event) => {
@@ -14,8 +14,10 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   event.respondWith(fetch(event.request).then((response) => {
-    const copy = response.clone();
-    caches.open(CACHE).then((cache) => cache.put(event.request, copy));
+    if (response.ok) {
+      const copy = response.clone();
+      caches.open(CACHE).then((cache) => cache.put(event.request, copy));
+    }
     return response;
   }).catch(() => caches.match(event.request)));
 });

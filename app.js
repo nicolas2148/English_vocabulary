@@ -1,7 +1,7 @@
 const STORAGE_KEY = "word-spark-progress-v1";
 const state = {
   words: [], currentIndex: 0, revealed: false, activeView: "study",
-  studyWords: [], reviewMode: false,
+  studyWords: [], taskWords: [], selectedUnits: [], reviewMode: false,
   progress: loadProgress(), quiz: null, spelling: null,
 };
 
@@ -78,10 +78,11 @@ function consecutiveDays() {
 }
 
 function updateStats() {
-  const entries = Object.keys(state.progress.words).map((id) => getWordProgress(id));
+  const entries = state.taskWords.map((word) => getWordProgress(word.id));
   const mastered = entries.filter((item) => item.correct >= 2 && item.correct > item.wrong).length;
   const review = entries.filter((item) => item.needsReview).length;
-  const today = (state.progress.daily[todayKey()] || []).length;
+  const selectedIds = new Set(state.taskWords.map((word) => word.id));
+  const today = (state.progress.daily[todayKey()] || []).filter((id) => selectedIds.has(id)).length;
   $("#streak-count").textContent = consecutiveDays();
   $("#today-count").textContent = today;
   $("#mastered-count").textContent = mastered;
@@ -90,15 +91,16 @@ function updateStats() {
   $("#seen-total").textContent = entries.filter((item) => item.seen > 0).length;
   $("#mastered-total").textContent = mastered;
   $("#wrong-total").textContent = review;
+  $("#word-total").textContent = `所选单元共 ${state.taskWords.length} 个`;
   renderWrongList();
 }
 
 function getReviewWords() {
-  return state.words.filter((word) => getWordProgress(word.id).needsReview);
+  return state.taskWords.filter((word) => getWordProgress(word.id).needsReview);
 }
 
 function currentStudyWords() {
-  return state.studyWords.length ? state.studyWords : state.words;
+  return state.studyWords.length ? state.studyWords : state.taskWords;
 }
 
 function renderWord() {
@@ -106,8 +108,8 @@ function renderWord() {
   const word = words[state.currentIndex];
   if (!word) return;
   state.revealed = false;
-  $("#study-eyebrow").textContent = state.reviewMode ? "错词专项复习" : "七年级 · 示例词库";
-  $("#study-heading").textContent = state.reviewMode ? "再次练习" : "今天的单词";
+  $("#study-eyebrow").textContent = state.reviewMode ? "错词专项复习" : state.selectedUnits.join(" · ");
+  $("#study-heading").textContent = state.reviewMode ? "再次练习" : "所选单元的单词";
   $("#word-position").textContent = `${state.currentIndex + 1} / ${words.length}`;
   $("#word-unit").textContent = word.unit;
   $("#word-pos").textContent = word.pos;
@@ -136,13 +138,57 @@ function answerStudy(correct) {
   renderWord();
 }
 
+const VOICE_KEY = "word-spark-voice-v1";
+let englishVoices = [];
+let preferredVoice = "";
+let currentUtterance = null;
+try { preferredVoice = localStorage.getItem(VOICE_KEY) || ""; } catch {}
+
+function refreshVoices() {
+  if (!("speechSynthesis" in window)) {
+    $("#voice-status").textContent = "当前浏览器不支持朗读。";
+    $("#voice-select").disabled = true;
+    $("#test-voice").disabled = true;
+    return;
+  }
+  const quality = (voice) => (/^en[-_]GB$/i.test(voice.lang) ? 100 : 0)
+    + (/premium|enhanced|natural|neural/i.test(voice.name) ? 10 : 0);
+  englishVoices = window.speechSynthesis.getVoices()
+    .filter((voice) => /^en(?:[-_]|$)/i.test(voice.lang))
+    .sort((a, b) => quality(b) - quality(a));
+  const select = $("#voice-select");
+  select.replaceChildren(new Option("自动选择（优先英式）", ""));
+  englishVoices.forEach((voice) => select.add(new Option(`${voice.name} · ${voice.lang}`, voice.voiceURI)));
+  select.value = englishVoices.some((voice) => voice.voiceURI === preferredVoice) ? preferredVoice : "";
+  const voice = englishVoices.find((item) => item.voiceURI === preferredVoice) || englishVoices[0];
+  $("#voice-status").textContent = voice ? `当前：${voice.name}（${voice.lang}）` : "使用设备默认英式英语语音。";
+}
+
 function speakWord(text) {
   if (!("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "en-US";
-  utterance.rate = 0.82;
-  window.speechSynthesis.speak(utterance);
+  try {
+    refreshVoices();
+    window.speechSynthesis.cancel();
+    const spokenText = text === "ICT" ? "I C T" : text;
+    const utterance = new SpeechSynthesisUtterance(spokenText);
+    const voice = englishVoices.find((item) => item.voiceURI === preferredVoice) || englishVoices[0];
+    if (voice) utterance.voice = voice;
+    utterance.lang = voice?.lang || "en-GB";
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    currentUtterance = utterance;
+    utterance.onend = () => { if (currentUtterance === utterance) currentUtterance = null; };
+    utterance.onerror = (event) => {
+      if (!["canceled", "interrupted"].includes(event.error)) {
+        $("#voice-status").textContent = "朗读未能启动，请点击音符重试或选择另一种英语语音。";
+      }
+      if (currentUtterance === utterance) currentUtterance = null;
+    };
+    window.speechSynthesis.speak(utterance);
+  } catch (error) {
+    console.warn("朗读失败", error);
+    $("#voice-status").textContent = "朗读暂不可用，可继续练习或更换英语语音。";
+  }
 }
 
 function speakCurrentWord() {
@@ -154,7 +200,7 @@ function switchView(view) {
   const previousView = state.activeView;
   if (view === "study" && previousView !== "study" && state.reviewMode) {
     const reviewWords = getReviewWords();
-    state.studyWords = reviewWords.length ? reviewWords : state.words;
+    state.studyWords = reviewWords.length ? reviewWords : state.taskWords;
     state.reviewMode = reviewWords.length > 0;
     state.currentIndex = 0;
   }
@@ -179,7 +225,7 @@ function shuffled(items) {
 
 function startQuiz() {
   const reviewWords = getReviewWords();
-  const selected = reviewWords.length ? shuffled(reviewWords) : shuffled(state.words).slice(0, Math.min(10, state.words.length));
+  const selected = reviewWords.length ? shuffled(reviewWords) : shuffled(state.taskWords).slice(0, Math.min(10, state.taskWords.length));
   state.quiz = { questions: selected, index: 0, score: 0, locked: false };
   $("#quiz-heading").textContent = `${selected.length} 题认一认`;
   $("#quiz-start").hidden = true;
@@ -188,8 +234,9 @@ function startQuiz() {
 
 function quizChoices(word, useEnglish) {
   const answer = useEnglish ? word.word : word.meaning;
-  const alternatives = shuffled(state.words.filter((item) => item.id !== word.id))
-    .slice(0, 3).map((item) => useEnglish ? item.word : item.meaning);
+  const alternatives = shuffled([...new Set(state.taskWords
+    .map((item) => useEnglish ? item.word : item.meaning)
+    .filter((value) => value !== answer))]).slice(0, 3);
   return shuffled([answer, ...alternatives]);
 }
 
@@ -237,12 +284,15 @@ function answerQuiz(button, chosen, answer) {
     if (option.textContent === answer) option.classList.add("correct");
   });
   $("#quiz-feedback").textContent = correct ? "回答正确 ✓" : `正确答案：${answer}`;
-  setTimeout(() => { quiz.index += 1; renderQuizQuestion(); }, 850);
+  setTimeout(() => {
+    if (state.quiz !== quiz) return;
+    quiz.index += 1; renderQuizQuestion();
+  }, 850);
 }
 
 function startSpelling() {
   const reviewWords = getReviewWords();
-  const selected = reviewWords.length ? shuffled(reviewWords) : shuffled(state.words).slice(0, Math.min(10, state.words.length));
+  const selected = reviewWords.length ? shuffled(reviewWords) : shuffled(state.taskWords).slice(0, Math.min(10, state.taskWords.length));
   state.spelling = { questions: selected, index: 0, score: 0, answered: false };
   $("#spelling-heading").textContent = `${selected.length} 题拼一拼`;
   $("#spelling-start").hidden = true;
@@ -272,49 +322,63 @@ function renderSpellingQuestion() {
   $("#spelling-form").hidden = false;
   $("#spelling-next").hidden = true;
   const answer = word.word.toLowerCase();
-  const missing = answer.slice(1, -1);
-  $("#spelling-first").textContent = answer[0];
-  $("#spelling-last").textContent = answer.at(-1);
+  const letters = [...answer].map((character, index) => /[a-z]/.test(character) ? index : -1).filter((index) => index >= 0);
+  // Short entries such as "as" and "a.m." still need at least one answer letter.
+  const hints = new Set(letters.length > 2 ? [letters[0], letters[letters.length - 1]] : [letters[0]]);
+  $("#spelling-first").textContent = "";
+  $("#spelling-last").textContent = "";
   const slots = $("#spelling-slots");
   slots.replaceChildren();
-  slots.setAttribute("aria-label", `${answer[0]} 开头、${answer.at(-1)} 结尾，填写中间 ${missing.length} 个字母`);
-  [...missing].forEach((_, index) => {
+  const missingCount = letters.length - hints.size;
+  slots.setAttribute("aria-label", `填写 ${missingCount} 个缺失字母，空格和标点已给出`);
+  [...answer].forEach((character, position) => {
+    if (!/[a-z]/.test(character) || hints.has(position)) {
+      const fixed = document.createElement("span");
+      fixed.className = character === " " ? "spelling-space" : "spelling-fixed";
+      fixed.textContent = character === " " ? "\u00a0" : character;
+      slots.append(fixed);
+      return;
+    }
     const input = document.createElement("input");
     input.className = "spelling-letter";
+    input.dataset.position = position;
     input.type = "text";
     input.inputMode = "text";
     input.maxLength = 1;
     input.autocomplete = "off";
     input.autocapitalize = "none";
     input.spellcheck = false;
-    input.setAttribute("aria-label", `第 ${index + 1} 个缺失字母，共 ${missing.length} 个`);
+    input.setAttribute("aria-label", `第 ${position + 1} 个字符，填写字母`);
+    const inputs = () => [...slots.querySelectorAll("input")];
     input.addEventListener("input", () => {
       input.value = input.value.replace(/[^a-z]/gi, "").slice(-1).toLowerCase();
-      if (input.value) slots.children[index + 1]?.focus();
+      const fields = inputs();
+      if (input.value) fields[fields.indexOf(input) + 1]?.focus();
     });
     input.addEventListener("keydown", (event) => {
+      const fields = inputs();
+      const index = fields.indexOf(input);
       if (event.key === "Backspace" && !input.value && index > 0) {
         event.preventDefault();
-        const previous = slots.children[index - 1];
-        previous.value = "";
-        previous.focus();
+        fields[index - 1].value = "";
+        fields[index - 1].focus();
       }
-      if (event.key === "ArrowLeft" && index > 0) slots.children[index - 1].focus();
-      if (event.key === "ArrowRight") slots.children[index + 1]?.focus();
+      if (event.key === "ArrowLeft") fields[index - 1]?.focus();
+      if (event.key === "ArrowRight") fields[index + 1]?.focus();
     });
     input.addEventListener("paste", (event) => {
       event.preventDefault();
-      const letters = event.clipboardData.getData("text").replace(/[^a-z]/gi, "").toLowerCase();
-      [...letters].forEach((letter, offset) => {
-        const targetSlot = slots.children[index + offset];
-        if (targetSlot) targetSlot.value = letter;
+      const pasted = event.clipboardData.getData("text").replace(/[^a-z]/gi, "").toLowerCase();
+      const fields = inputs();
+      const index = fields.indexOf(input);
+      [...pasted].forEach((letter, offset) => {
+        if (fields[index + offset]) fields[index + offset].value = letter;
       });
-      const nextIndex = Math.min(index + letters.length, slots.children.length - 1);
-      slots.children[nextIndex]?.focus();
+      fields[Math.min(index + pasted.length, fields.length - 1)]?.focus();
     });
     slots.append(input);
   });
-  slots.firstElementChild?.focus();
+  slots.querySelector("input")?.focus();
 }
 
 function answerSpelling(event) {
@@ -328,9 +392,10 @@ function answerSpelling(event) {
     firstEmpty.focus();
     return;
   }
-  const middle = inputs.map((input) => input.value).join("").toLowerCase();
   const target = word.word.toLowerCase();
-  const answer = `${target[0]}${middle}${target.at(-1)}`;
+  const characters = [...target];
+  inputs.forEach((input) => { characters[Number(input.dataset.position)] = input.value.toLowerCase(); });
+  const answer = characters.join("");
 
   spelling.answered = true;
   const correct = answer === target;
@@ -411,15 +476,111 @@ function registerWebMCP() {
   });
 }
 
-async function init() {
-  const response = await fetch("./data/words.json");
-  if (!response.ok) throw new Error("词库加载失败");
-  state.words = await response.json();
-  state.studyWords = state.words;
+function renderUnitPicker() {
+  const units = [...new Set(state.words.map((word) => word.unit))];
+  $("#unit-options").replaceChildren(...units.map((unit) => {
+    const label = document.createElement("label");
+    label.className = "unit-option";
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.name = "unit";
+    input.value = unit;
+    input.checked = state.selectedUnits.includes(unit);
+    input.addEventListener("change", updateUnitSummary);
+    const text = document.createElement("span");
+    const title = document.createElement("strong");
+    title.textContent = unit;
+    const count = document.createElement("small");
+    count.textContent = `${state.words.filter((word) => word.unit === unit).length} 个单词和短语`;
+    text.append(title, count);
+    label.append(input, text);
+    return label;
+  }));
+  updateUnitSummary();
+}
+
+function updateUnitSummary() {
+  const units = $$("#unit-options input:checked").map((input) => input.value);
+  const count = state.words.filter((word) => units.includes(word.unit)).length;
+  $("#unit-summary").textContent = units.length ? `已选 ${units.length} 个单元，共 ${count} 个单词和短语` : "请至少选择一个单元。";
+  $("#start-task").disabled = !count;
+}
+
+function showUnitPicker() {
+  window.speechSynthesis?.cancel();
+  renderUnitPicker();
+  $("#unit-picker").hidden = false;
+  $("#learning-app").hidden = true;
+  $("#cancel-units").hidden = !state.taskWords.length;
+  $("#unit-options input")?.focus();
+}
+
+function startTask(event) {
+  event.preventDefault();
+  const units = $$("#unit-options input:checked").map((input) => input.value);
+  if (!units.length) return;
+  state.selectedUnits = units;
+  state.taskWords = state.words.filter((word) => units.includes(word.unit));
+  state.studyWords = state.taskWords;
+  state.currentIndex = 0;
+  state.reviewMode = false;
+  state.quiz = null;
+  state.spelling = null;
+  $("#quiz-heading").textContent = "10 题认一认";
+  $("#quiz-position").textContent = "准备开始";
+  $("#quiz-direction").textContent = "从所选单元随机出题，优先复习错词。";
+  $("#quiz-prompt").textContent = "检验一下学习成果";
+  $("#quiz-options").replaceChildren();
+  $("#quiz-feedback").textContent = "";
+  $("#quiz-start").hidden = false;
+  $("#quiz-start").textContent = "开始认一认";
+  $("#spelling-heading").textContent = "10 题拼一拼";
+  $("#spelling-position").textContent = "准备开始";
+  $("#spelling-label").textContent = "根据中文和字母提示，补全英文；空格和标点已给出。";
+  $("#spelling-prompt").textContent = "准备好挑战拼写了吗？";
+  $("#spelling-form").hidden = true;
+  $("#spelling-next").hidden = true;
+  $("#spelling-feedback").replaceChildren();
+  $("#spelling-start").hidden = false;
+  $("#spelling-start").textContent = "开始拼一拼";
+  $("#task-summary").textContent = `${units.join(" + ")} · ${state.taskWords.length} 个词条`;
+  $("#unit-picker").hidden = true;
+  $("#learning-app").hidden = false;
+  // Render once, inside the user's tap, to allow speech on iPad/iPhone.
+  state.activeView = "study";
+  switchView("study");
   renderWord();
   updateStats();
-  registerWebMCP();
+  $("#reveal-button").focus({ preventScroll: true });
+}
 
+async function init() {
+  const response = await fetch("./data/words.json", { cache: "no-cache" });
+  if (!response.ok) throw new Error("词库加载失败");
+  const words = await response.json();
+  const keys = ["id", "word", "phonetic", "pos", "meaning", "example", "exampleZh", "unit"];
+  if (!Array.isArray(words) || !words.length || words.some((word) => !word || keys.some((key) => typeof word[key] !== "string" || !word[key].trim())) || new Set(words.map((word) => word.id)).size !== words.length) {
+    throw new Error("词库格式不正确");
+  }
+  state.words = words;
+  renderUnitPicker();
+  $("#load-status").hidden = true;
+  $("#unit-form").hidden = false;
+  refreshVoices();
+  window.speechSynthesis?.addEventListener("voiceschanged", refreshVoices);
+  try { registerWebMCP(); } catch (error) { console.warn("进度工具不可用", error); }
+
+  $("#unit-form").addEventListener("submit", startTask);
+  $("#select-all").addEventListener("click", () => { $$("#unit-options input").forEach((input) => { input.checked = true; }); updateUnitSummary(); });
+  $("#clear-units").addEventListener("click", () => { $$("#unit-options input").forEach((input) => { input.checked = false; }); updateUnitSummary(); });
+  $("#change-units").addEventListener("click", showUnitPicker);
+  $("#cancel-units").addEventListener("click", () => { $("#unit-picker").hidden = true; $("#learning-app").hidden = false; });
+  $("#voice-select").addEventListener("change", (event) => {
+    preferredVoice = event.target.value;
+    try { localStorage.setItem(VOICE_KEY, preferredVoice); } catch {}
+    speakCurrentWord();
+  });
+  $("#test-voice").addEventListener("click", speakCurrentWord);
   $$(".tab").forEach((button) => button.addEventListener("click", () => switchView(button.dataset.view)));
   $("#reveal-button").addEventListener("click", revealWord);
   $("#speak-button").addEventListener("click", speakCurrentWord);
@@ -431,17 +592,17 @@ async function init() {
   $("#review-again").addEventListener("click", startReviewSession);
 
   document.addEventListener("keydown", (event) => {
-    if (state.activeView !== "study" || event.target.matches("button, input")) return;
+    if (!$("#unit-picker").hidden || state.activeView !== "study" || event.target.matches("button, input, select")) return;
     if (event.code === "Space") { event.preventDefault(); if (!state.revealed) revealWord(); }
     if (event.key === "ArrowLeft" && state.revealed) answerStudy(false);
     if (event.key === "ArrowRight" && state.revealed) answerStudy(true);
   });
 
-  if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js");
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch((error) => console.warn("离线缓存暂不可用", error));
 }
 
-init().catch(() => {
-  $("#word-text").textContent = "暂时无法加载";
-  $("#word-meaning").textContent = "请刷新页面后再试。";
+init().catch((error) => {
+  console.error("启动失败", error);
+  $("#load-status").hidden = false;
+  $("#load-status").textContent = "暂时无法加载词库，请联网后刷新页面重试。";
 });
-
