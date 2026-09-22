@@ -1,7 +1,7 @@
 const STORAGE_KEY = "word-spark-progress-v1";
 const state = {
   words: [], currentIndex: 0, revealed: false, activeView: "study",
-  progress: loadProgress(), quiz: null,
+  progress: loadProgress(), quiz: null, spelling: null,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -193,6 +193,78 @@ function answerQuiz(button, chosen, answer) {
   setTimeout(() => { quiz.index += 1; renderQuizQuestion(); }, 850);
 }
 
+function startSpelling() {
+  const selected = shuffled(state.words).slice(0, Math.min(10, state.words.length));
+  state.spelling = { questions: selected, index: 0, score: 0, answered: false };
+  $("#spelling-start").hidden = true;
+  renderSpellingQuestion();
+}
+
+function renderSpellingQuestion() {
+  const spelling = state.spelling;
+  if (spelling.index >= spelling.questions.length) {
+    $("#spelling-position").textContent = "已完成";
+    $("#spelling-label").textContent = "拼写练习完成";
+    $("#spelling-prompt").textContent = `答对 ${spelling.score} / ${spelling.questions.length}`;
+    $("#spelling-form").hidden = true;
+    $("#spelling-next").hidden = true;
+    $("#spelling-feedback").replaceChildren();
+    $("#spelling-start").textContent = "再拼一次";
+    $("#spelling-start").hidden = false;
+    return;
+  }
+
+  spelling.answered = false;
+  const word = spelling.questions[spelling.index];
+  $("#spelling-position").textContent = `${spelling.index + 1} / ${spelling.questions.length}`;
+  $("#spelling-label").textContent = `${word.unit} · ${word.pos}`;
+  $("#spelling-prompt").textContent = word.meaning;
+  $("#spelling-feedback").replaceChildren();
+  $("#spelling-form").hidden = false;
+  $("#spelling-next").hidden = true;
+  $("#spelling-input").disabled = false;
+  $("#spelling-input").value = "";
+  $("#spelling-input").focus();
+}
+
+function answerSpelling(event) {
+  event.preventDefault();
+  const spelling = state.spelling;
+  if (!spelling || spelling.answered) return;
+  const word = spelling.questions[spelling.index];
+  const answer = $("#spelling-input").value.trim().toLowerCase();
+  if (!answer) return;
+
+  spelling.answered = true;
+  const correct = answer === word.word.toLowerCase();
+  if (correct) spelling.score += 1;
+  recordResult(word.id, correct);
+  $("#spelling-input").disabled = true;
+  $("#spelling-next").hidden = false;
+
+  const result = document.createElement("p");
+  result.className = `spelling-result ${correct ? "is-correct" : "is-wrong"}`;
+  if (correct) {
+    result.innerHTML = "<span aria-hidden=\"true\">✓</span><strong>拼写正确</strong>";
+  } else {
+    const mark = document.createElement("span");
+    mark.setAttribute("aria-hidden", "true");
+    mark.textContent = "×";
+    const title = document.createElement("strong");
+    title.textContent = `正确拼写：${word.word}`;
+    const note = document.createElement("small");
+    note.textContent = `你的答案：${answer}`;
+    result.append(mark, title, note);
+  }
+  $("#spelling-feedback").replaceChildren(result);
+}
+
+function nextSpellingQuestion() {
+  if (!state.spelling?.answered) return;
+  state.spelling.index += 1;
+  renderSpellingQuestion();
+}
+
 function renderWrongList() {
   const container = $("#wrong-list");
   if (!container || !state.words.length) return;
@@ -245,6 +317,9 @@ async function init() {
   $("#speak-button").addEventListener("click", speakCurrentWord);
   $$("[data-result]").forEach((button) => button.addEventListener("click", () => answerStudy(button.dataset.result === "known")));
   $("#quiz-start").addEventListener("click", startQuiz);
+  $("#spelling-start").addEventListener("click", startSpelling);
+  $("#spelling-form").addEventListener("submit", answerSpelling);
+  $("#spelling-next").addEventListener("click", nextSpellingQuestion);
 
   document.addEventListener("keydown", (event) => {
     if (state.activeView !== "study" || event.target.matches("button, input")) return;
