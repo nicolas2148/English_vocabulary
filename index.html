@@ -13,7 +13,7 @@
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <p class="personal-message">Hi, Aden, you're the best!</p>
+        <p class="personal-message">建平香梅中学预备2班英语上册单词过关</p>
         <div class="streak" aria-label="连续学习天数">
           <span aria-hidden="true">🔥</span>
           <strong id="streak-count">0</strong>
@@ -48,7 +48,7 @@
 
           <section class="view is-active" id="study-view" aria-labelledby="study-heading">
             <div class="view-heading">
-              <div><p class="eyebrow">七年级 · 示例词库</p><h2 id="study-heading">今天的单词</h2></div>
+              <div><p class="eyebrow" id="study-eyebrow">七年级 · 示例词库</p><h2 id="study-heading">今天的单词</h2></div>
               <span id="word-position" class="position">1 / 20</span>
             </div>
             <div class="word-card" id="word-card">
@@ -118,7 +118,10 @@
             </div>
             <div class="wrong-list-card">
               <div><h3>需要再练的单词</h3><p>做错或点过“还要练习”的单词会出现在这里。</p></div>
-              <div id="wrong-list" class="wrong-list"></div>
+              <div class="wrong-list-actions">
+                <div id="wrong-list" class="wrong-list"></div>
+                <button class="primary-button" id="review-again" hidden>再次练习</button>
+              </div>
             </div>
           </section>
         </section>
