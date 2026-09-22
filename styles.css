@@ -172,9 +172,11 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--sun); outline-o
 .wrong-list-card { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 26px; }
 .wrong-list-card h3 { margin: 0 0 5px; }
 .wrong-list-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.wrong-list-actions { display: grid; justify-items: end; gap: 14px; min-width: min(280px, 100%); }
 .wrong-list { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; max-width: 280px; }
 .wrong-list span { padding: 6px 10px; background: #fff2cf; border-radius: 999px; font-size: 13px; font-weight: 700; }
 .wrong-list .empty { color: var(--muted); background: #edf3f1; }
+#review-again { width: 100%; }
 
 @media (max-width: 800px) {
   .page-shell { width: 100%; margin: 0; border: 0; border-radius: 0; min-height: 100svh; }
@@ -212,6 +214,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--sun); outline-o
   .quiz-options, .progress-grid { grid-template-columns: 1fr; }
   #spelling-form { flex-direction: column; }
   .wrong-list-card { display: block; }
+  .wrong-list-actions { justify-items: stretch; margin-top: 18px; }
   .wrong-list { justify-content: flex-start; margin-top: 18px; }
 }
 
