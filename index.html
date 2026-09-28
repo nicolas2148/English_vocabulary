@@ -8,7 +8,7 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b3b49'/%3E%3Cpath d='M18 17h21a8 8 0 0 1 8 8v22H26a8 8 0 0 0-8 0V17Z' fill='%23ffd166'/%3E%3Cpath d='M26 17v30' stroke='%23fff' stroke-width='4'/%3E%3C/svg%3E" />
     <title>词光 · 英语学习</title>
-    <link rel="stylesheet" href="./styles.css?v=20260922-3" />
+    <link rel="stylesheet" href="./styles.css?v=20260928-1" />
   </head>
   <body>
     <div class="page-shell">
@@ -72,6 +72,11 @@
               <button class="sound-button" id="speak-button" aria-label="朗读当前单词">♪</button>
               <p class="word" id="word-text">loading</p>
               <p class="phonetic" id="word-phonetic">/ˈləʊdɪŋ/</p>
+              <button class="speech-unlock" id="speech-unlock" type="button" hidden>
+                <span aria-hidden="true">🔊</span>
+                点击开启自动朗读
+              </button>
+              <p class="sr-only" id="speech-status" aria-live="polite"></p>
               <div class="answer" id="word-answer" hidden>
                 <span class="answer-rule"></span>
                 <strong id="word-meaning">正在加载词库…</strong>
@@ -144,7 +149,7 @@
       </main>
     </div>
     <noscript>请开启 JavaScript 后使用词光。</noscript>
-    <script src="./app.js?v=20260922-3" defer></script>
+    <script src="./app.js?v=20260928-1" defer></script>
   </body>
 </html>
 
