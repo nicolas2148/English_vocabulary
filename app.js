@@ -3,6 +3,7 @@ const state = {
   words: [], currentIndex: 0, revealed: false, activeView: "study",
   studyWords: [], taskWords: [], selectedUnits: [], reviewMode: false,
   progress: loadProgress(), quiz: null, spelling: null,
+  speechUnlocked: !requiresSpeechGesture(),
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -138,6 +139,21 @@ function answerStudy(correct) {
   renderWord();
 }
 
+function requiresSpeechGesture() {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isSafari = /Safari/i.test(navigator.userAgent)
+    && !/(CriOS|FxiOS|EdgiOS|OPiOS)/i.test(navigator.userAgent);
+  return isIOS && isSafari;
+}
+
+function setSpeechPrompt(visible, message = "") {
+  const prompt = $("#speech-unlock");
+  if (prompt) prompt.hidden = !visible;
+  const status = $("#speech-status");
+  if (status && message) status.textContent = message;
+}
+
 let englishVoices = [];
 let currentUtterance = null;
 
@@ -150,11 +166,17 @@ function refreshVoices() {
     .sort((a, b) => quality(b) - quality(a));
 }
 
-function speakWord(text) {
-  if (!("speechSynthesis" in window)) return;
+function speakWord(text, { fromGesture = false } = {}) {
+  if (!("speechSynthesis" in window) || !text) return false;
+  if (requiresSpeechGesture() && !state.speechUnlocked && !fromGesture) {
+    setSpeechPrompt(true, "请点击开启自动朗读");
+    return false;
+  }
+
   try {
     refreshVoices();
-    window.speechSynthesis.cancel();
+    const speech = window.speechSynthesis;
+    if (speech.speaking || speech.pending) speech.cancel();
     const spokenText = text === "ICT" ? "I C T" : text;
     const utterance = new SpeechSynthesisUtterance(spokenText);
     const voice = englishVoices[0];
@@ -163,22 +185,43 @@ function speakWord(text) {
     utterance.rate = 0.95;
     utterance.pitch = 1;
     currentUtterance = utterance;
-    utterance.onend = () => { if (currentUtterance === utterance) currentUtterance = null; };
-    utterance.onerror = (event) => {
-      if (!["canceled", "interrupted"].includes(event.error)) {
-        console.warn("朗读未能启动", event.error);
-      }
+    if (fromGesture) state.speechUnlocked = true;
+    utterance.onstart = () => {
+      state.speechUnlocked = true;
+      setSpeechPrompt(false, "自动朗读已开启");
+    };
+    utterance.onend = () => {
       if (currentUtterance === utterance) currentUtterance = null;
     };
-    window.speechSynthesis.speak(utterance);
+    utterance.onerror = (event) => {
+      if (currentUtterance === utterance) currentUtterance = null;
+      if (event.error === "not-allowed" && requiresSpeechGesture()) {
+        state.speechUnlocked = false;
+        setSpeechPrompt(true, "请点击开启自动朗读");
+      } else if (!["canceled", "interrupted"].includes(event.error)) {
+        console.warn("朗读未能启动", event.error);
+      }
+    };
+    speech.speak(utterance);
+    if (fromGesture) setSpeechPrompt(false, "自动朗读已开启");
+    return true;
   } catch (error) {
     console.warn("朗读失败", error);
+    if (requiresSpeechGesture()) {
+      state.speechUnlocked = false;
+      setSpeechPrompt(true, "请点击开启自动朗读");
+    }
+    return false;
   }
 }
 
-function speakCurrentWord() {
+function speakCurrentWord(fromGesture = false) {
   const word = currentStudyWords()[state.currentIndex];
-  if (word) speakWord(word.word);
+  if (word) speakWord(word.word, { fromGesture });
+}
+
+function enableAutoSpeech() {
+  speakCurrentWord(true);
 }
 
 function switchView(view) {
@@ -562,7 +605,8 @@ async function init() {
   $("#cancel-units").addEventListener("click", () => { $("#unit-picker").hidden = true; $("#learning-app").hidden = false; });
   $$(".tab").forEach((button) => button.addEventListener("click", () => switchView(button.dataset.view)));
   $("#reveal-button").addEventListener("click", revealWord);
-  $("#speak-button").addEventListener("click", speakCurrentWord);
+  $("#speech-unlock").addEventListener("click", enableAutoSpeech);
+  $("#speak-button").addEventListener("click", enableAutoSpeech);
   $$("[data-result]").forEach((button) => button.addEventListener("click", () => answerStudy(button.dataset.result === "known")));
   $("#quiz-start").addEventListener("click", startQuiz);
   $("#spelling-start").addEventListener("click", startSpelling);
