@@ -111,6 +111,12 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--sun); outline-o
 .sound-button { position: absolute; top: 24px; right: 24px; width: 44px; height: 44px; border: 0; border-radius: 50%; color: var(--deep); background: var(--sun); cursor: pointer; font-weight: 900; }
 .word { margin: 42px 0 4px; font: 700 clamp(48px, 8vw, 76px)/1 Georgia, serif; letter-spacing: -.04em; color: var(--deep); }
 .phonetic { margin: 12px 0 28px; color: var(--muted); font-size: 17px; }
+.speech-unlock {
+  min-height: 50px; margin: -8px auto 20px; padding: 12px 20px; border: 2px solid var(--teal);
+  border-radius: 14px; color: var(--deep); background: var(--mint); cursor: pointer; font-weight: 800;
+}
+.speech-unlock span { margin-right: 7px; }
+.speech-unlock:active { transform: translateY(1px); }
 .answer-rule { display: block; width: 44px; height: 3px; margin: 0 auto 16px; border-radius: 99px; background: var(--sun); }
 .answer strong { display: block; font-size: 22px; }
 .answer p { margin: 18px 0 4px; font-size: 17px; line-height: 1.55; }
