@@ -1,5 +1,5 @@
-const CACHE = "word-spark-v3-task-total";
-const ASSETS = ["./", "./index.html", "./styles.css?v=20260922-3", "./app.js?v=20260922-3", "./data/words.json", "./manifest.webmanifest", "./icon.svg"];
+const CACHE = "word-spark-v4-ipad-speech";
+const ASSETS = ["./", "./index.html", "./styles.css?v=20260928-1", "./app.js?v=20260928-1", "./data/words.json", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ASSETS)));
