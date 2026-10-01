@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "id": "no-1",
+  "number": 1,
+  "label": "No.1",
+  "sourceFile": "No.1.pdf",
+  "passages": [
+    {
+      "id": "no-1-passage-1",
+      "title": "短文 01",
+      "paragraphs": [
+        "Sam is a little boy. He is 3 years old. This is the first day for little Sam to go to Sunny Kindergarten. In the morning, he meets his classmates in the classroom. They greet each other. They play happily together."
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "no-1-passage-2",
+      "title": "短文 02",
+      "paragraphs": [
+        "It is time for the art class. The children begin to draw. Sam wants to draw a box. He needs a ruler, a pencil, a rubber, and some crayons."
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "no-1-passage-3",
+      "title": "短文 03",
+      "paragraphs": [
+        "Hello, everybody. I’m Ariel, the little mermaid. I live in the deep sea. My father is the sea king. I have five elder sisters. Look at me. I can sing beautiful songs with my mouth. I can see with my eyes. I can smell with my nose. I have two ears. My hair is long. I can swim with my tail. But I have no legs. I hope I can walk with my legs."
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "no-1-passage-4",
+      "title": "短文 04",
+      "paragraphs": [
+        "Hello, everyone. My name is Ada. My last name is Zheng. I’m a happy girl. I’m two years old. I have two big eyes and my hair is short. My address is Park Street. My telephone number is 1234. I’m from Shanghai. I study in Kangcheng School in Shanghai."
+      ],
+      "sourcePages": [
+        1
+      ]
+    },
+    {
+      "id": "no-1-passage-5",
+      "title": "短文 05",
+      "paragraphs": [
+        "The animals are having a sports meeting in the field. Look at Miss Rabbit. She can jump high. Look at Mr. Monkey. He can climb trees. Mrs. Hippo can swim fast, but Miss Dog can’t."
+      ],
+      "sourcePages": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "no-1-passage-6",
+      "title": "短文 06",
+      "paragraphs": [
+        "This is the family tree of the Wang family. All the members of the Wang family are on this family tree. Betty and Jack are the parents of Bobby. Betty is he’s mother. Jack is he’s father. Kevin is Jack’s elder brother. So he is Bobby’s uncle. Linda is Boddy’s aunt. She is Kevin’s wife. Kim is Bobby’s cousin. She is Linda and Kevin’s daughter. Jessie and Tom are Bobby’s grandparents."
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "no-1-passage-7",
+      "title": "短文 07",
+      "paragraphs": [
+        "I’m Alice. Lily is my best friend. She is eight years old. She is a very outgoing person. But I am a shy person. She likes music very much. But I don’t. She likes going to parties. But I like reading comic books at home. We are different, but we are good friends."
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "no-1-passage-8",
+      "title": "短文 08",
+      "paragraphs": [
+        "Hello, my name is Ada. I am a good girl. This is my school. It’s big and clean. I’m in Class One, Grade One. Our class teacher is Miss Wong. I have many friends in my class. This is Ben. He is tall and fat. He can play football. He is our monitor. He is also my friend. We always play together after class."
+      ],
+      "sourcePages": [
+        2
+      ]
+    },
+    {
+      "id": "no-1-passage-9",
+      "title": "短文 09",
+      "paragraphs": [
+        "Hello. My name is Nancy. I have a happy family. This is my father. He’s a manager. He’s tall and thin. That is my mother. She’s a teacher. She’s nice. She can cook and clean our rooms. Look at me. I am short. I am a good girl. I can sing, dance, draw and write some words. I am happy."
+      ],
+      "sourcePages": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "no-1-passage-10",
+      "title": "短文 10",
+      "paragraphs": [
+        "Hello. My name is Ben Morris. I have a nice schoolbag. There’s a red pencil case in my schoolbag. I have one math book, two English books and six exercise books. This is my friend, Peter. He has an eraser, three pencils and four rulers. I like reading comic books. Peter likes painting pictures."
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "no-1-passage-11",
+      "title": "短文 11",
+      "paragraphs": [
+        "Judy and Cindy are on their way home after school. They feel hungry. There’s a fruit shop near the school. Judy says to Cindy, “Let’s go and buy some fruits.” Then they go and buy some fruits. Judy likes the pineapple. But it’s too big for her. She cuts it into two and shares it with Cindy."
+      ],
+      "sourcePages": [
+        3
+      ]
+    },
+    {
+      "id": "no-1-passage-12",
+      "title": "短文 12",
+      "paragraphs": [
+        "Look! This is Piggy. He is small and fat. He is a hungry pig. He likes eating very much. In the morning, he feels hungry. He eats two hamburgers. In the afternoon, he feels hungry. He eats three pizzas. In the evening, he feels hungry again. He eats five apple pies. He says “Yummy, yummy. Now I am not hungry.” That night, Piggy has a nice sleep."
+      ],
+      "sourcePages": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "no-1-passage-13",
+      "title": "短文 13",
+      "paragraphs": [
+        "Arthur is very hungry. He sits at the table and says to his mom, “I want dinner.” His mom says, “Have an apple.” “I don’t like apples.” Says Arthur to he’s mom. “Have some noodles.” His mom says. “All right. Noodles are yummy.” Arthur says. Then they eat noodles together. Now Arthur is full."
+      ],
+      "sourcePages": [
+        4
+      ]
+    },
+    {
+      "id": "no-1-passage-14",
+      "title": "短文 14",
+      "paragraphs": [
+        "Mama duck has five little ducks. “Hello, I am Jenny. I can sing.” The first duck says. “Hello, I am Ben. I can swim.” The next one says. The third little duck comes. She says “Hi, I am Alice. I can dance.” Sam comes too. He says “I am Sam. I can dive.” The little ducking, Johny, can’t do anything, but he can try to learn."
+      ],
+      "sourcePages": [
+        4
+      ]
+    },
+    {
+      "id": "no-1-passage-15",
+      "title": "短文 15",
+      "paragraphs": [
+        "Princess CiCi is sad. She has no friends. One day, she goes to the zoo with her parents. She sees a lot of animals. There are some horses, monkeys, rabbits and mice. She likes the mouse. Then she takes the mouse home. But the next day, she doesn’t like the mouse. Because it’s too dirty."
+      ],
+      "sourcePages": [
+        4
+      ]
+    },
+    {
+      "id": "no-1-passage-16",
+      "title": "短文 16",
+      "paragraphs": [
+        "This is Princess Rainbow. She has a pet. It’s a hamster. It’s white. Prince Black is Rainbow’s friend. He has a yellow chick. It goes “Peep, peep.” They both like their pets."
+      ],
+      "sourcePages": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "no-1-passage-17",
+      "title": "短文 17",
+      "paragraphs": [
+        "Little Piggy is only five months old. He is tiny. He is lovely. He loves to eat sweet food very much. “Mum, can I have some more chocolate?” He asks. “It’s bad for your teeth.” Mum answers. One morning, he eats a hamburger, a cake, a sandwich, some sweets and a lot of ice cream. But he is still hungry."
+      ],
+      "sourcePages": [
+        5
+      ]
+    },
+    {
+      "id": "no-1-passage-18",
+      "title": "Near the pond",
+      "paragraphs": [
+        "It is spring. Peter, Linda and Jane are near the pond.",
+        "Peter: Look! I can see a small fish.",
+        "Linda: A fish? And it is small and black.",
+        "Jane: Oh no! It is a tadpole.",
+        "Peter & Linda: tadpole?",
+        "Jane: Yes. One, two, three… I see six tadpoles.",
+        "Peter: Hey! Look! That is a frog.",
+        "Linda: Amazing!"
+      ],
+      "sourcePages": [
+        5
+      ]
+    },
+    {
+      "id": "no-1-passage-19",
+      "title": "A clever hen",
+      "paragraphs": [
+        "One day, a wolf sees some chicks on the farm.",
+        "Wolf: I see some chicks. I like chicks. Ha… Ha… Ha…",
+        "Chicks: Oh! A wolf! Help! Help!",
+        "Hen: Woof… Woof… Woof…",
+        "Wolf: What? I hear a dog. I’m afraid of dogs. The wolf runs away.",
+        "Chicks: Mummy! Mummy! You are great!",
+        "Hen: It’s very important to learn a foreign language."
+      ],
+      "sourcePages": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "no-1-passage-20",
+      "title": "In the restaurant",
+      "paragraphs": [
+        "It’s Saturday. Tom and Danny are in the restaurant.",
+        "Waiter: Can I help you?",
+        "Tom: May I have beef noodles?",
+        "Danny: Rice, please. And I want egg soup, too.",
+        "Waiter: OK. … Here you are.",
+        "Tom & Danny: Thank you.",
+        "Tom: I’m hungry. Taste the noodles. Yummy, yummy.",
+        "Danny: I can smell the soup. It’s nice. I like it."
+      ],
+      "sourcePages": [
+        6
+      ]
+    },
+    {
+      "id": "no-1-passage-21",
+      "title": "My money box",
+      "paragraphs": [
+        "I am Alice. I have a money box. It’s my piggy bank. It is fat. I put my pocket money in it. On New Year’s Day, I get luck money from my grandfather and grandmother. I put my luck money in my piggy bank too. I like my money box."
+      ],
+      "sourcePages": [
+        6
+      ]
+    },
+    {
+      "id": "no-1-passage-22",
+      "title": "Big ice cream",
+      "paragraphs": [
+        "It is Sunday. Jerry is walking in the street. He is hot. He sees a stall.",
+        "Jerry: Look, ice cream! I like big ice creams. Jerry runs to the stall. He looks at the big ice cream in the big ice cream picture.",
+        "Jerry: May I have an ice cream, please?",
+        "Ice cream girl: Big or small?",
+        "Jerry: Big, please.",
+        "Ice cream girl: Here you are.",
+        "Jerry: But this ice cream is not as big as the one in the picture. It is small."
+      ],
+      "sourcePages": [
+        7
+      ]
+    },
+    {
+      "id": "no-1-passage-23",
+      "title": "Your dog drinks your cola!",
+      "paragraphs": [
+        "The boys play football in the park. They are hot and thirsty. They are drinking. Tom：I am hot. I like juice. It is cold.",
+        "Jerry: I am thirsty. I can drink a big bottle of water.",
+        "Jack: I like cola. Can you see my cola?",
+        "Tom: Is it in your bag?",
+        "Jack: No.",
+        "Peter: Look, Jack. Your dog drinks your cola."
+      ],
+      "sourcePages": [
+        7
+      ]
+    },
+    {
+      "id": "no-1-passage-24",
+      "title": "Breakfast!",
+      "paragraphs": [
+        "What should I eat for breakfast? Maybe I should eat some cereal. Maybe I should eat some pancakes. Maybe I should eat some waffles. Maybe I should eat a bagel. Maybe I should eat an egg and some bacon. Maybe I should eat an egg and some toast. Maybe I should eat a banana. Maybe I should eat a doughnut. What should I eat for breakfast?"
+      ],
+      "sourcePages": [
+        8
+      ]
+    },
+    {
+      "id": "no-1-passage-25",
+      "title": "My birthday",
+      "paragraphs": [
+        "I’m Lucy. Today is my birthday. My mother is in the kitchen. She is making a cake for me. My father and I are in the yard. We ride a bicycle. Look, the cake is ready. It is very big. I see three candles on the cake. I get a gift from my father. It is a doll. I like it very much."
+      ],
+      "sourcePages": [
+        8
+      ]
+    },
+    {
+      "id": "no-1-passage-26",
+      "title": "Winter",
+      "paragraphs": [
+        "Winter is the fourth season in a year. It is beautiful. When it snows, the world is white. Children like playing in the snow. They can run and dance outside. They can also make snowmen. It is cold in winter, but children feel happy. It is a special season."
+      ],
+      "sourcePages": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": "no-1-passage-27",
+      "title": "Rainy day",
+      "paragraphs": [
+        "Tom: It’s rainy. What can I do at home?",
+        "Mum: You can play with your toys.",
+        "Tom: No, I don’t want to stay at home. I want to go out and play in the rain.",
+        "Mum: Mumm… All right. But you must wear your raincoat and your boots.",
+        "Tom: Thank you, Mummy. Then Tom puts on his blue raincoat and orange boots. He jumps up and down in the water. He says, “I love jumping in the water. It’s great fun.”"
+      ],
+      "sourcePages": [
+        9
+      ]
+    },
+    {
+      "id": "no-1-passage-28",
+      "title": "Crazy pants",
+      "paragraphs": [
+        "Patty is a girl. She takes her pants from the drawer. “Hey! Where do you think you’re going?” She says to her pants. Patty looks in the mirror. Her pants are on her head. “Oh, I get it.” Says Patty to her pants. “You’re tired of being pants. You want to be a hat today. I think you make a great hat. Stay right where you are."
+      ],
+      "sourcePages": [
+        9
+      ]
+    },
+    {
+      "id": "no-1-passage-29",
+      "title": "Costume",
+      "paragraphs": [
+        "Miss Wong: Red shoes, blue pants, yellow shirt. Who wants to put on this costume?",
+        "Jack: Me. Look at me. I’m a silly clown.",
+        "Miss Wong: Pink dress, gold crown, purple necklace. Who wants to put on this costume?",
+        "CiCi: Me. Look at me. I’m a beautiful princess.",
+        "Miss Wong: Brown hat, green hankie, black boots. Who wants to put on this costume?",
+        "Tommy: Me. Look at me. I’m a strong cowboy.",
+        "Miss Wong: Boys and girls, look at me. I’m a scary ghost. Boohoo!!!! I have the white sheet."
+      ],
+      "sourcePages": [
+        10
+      ]
+    },
+    {
+      "id": "no-1-passage-30",
+      "title": "A picnic",
+      "paragraphs": [
+        "It’s a sunny and windy day. Betty’s family are having a picnic in the park. There are four people in Betty’s family. They are Betty’s parents, Betty and her little sister. Look! They bring a lot of food. There is some bread, juice and fruit. Her parents are talking. She is flying a kite. What is her little sister doing now? Oh, she is sleeping."
+      ],
+      "sourcePages": [
+        10
+      ]
+    },
+    {
+      "id": "no-1-passage-31",
+      "title": "Christmas",
+      "paragraphs": [
+        "People in some countries celebrate Christmas every year. Here come three pupils from America, Britain and Australia.",
+        "Simon: I’m American. We get presents from our parents. We sing Christmas songs. We hang colorful lights on the Christmas trees.",
+        "Jack: I’m from Britain. We look for coins in the pudding.",
+        "Sarah: I’m Australian. We have a picnic on the beach. We wear T-shirts and dresses."
+      ],
+      "sourcePages": [
+        11
+      ]
+    },
+    {
+      "id": "no-1-passage-32",
+      "title": "Polly parrot",
+      "paragraphs": [
+        "Grandma has a new pet “Polly parrot”. The parrot can copy other’s words. Sally comes to see the parrot.",
+        "Grandma: Sally, I have a new pet. Come here and have a look.",
+        "Sally: Oh, a parrot.",
+        "Grandma: It can copy your words. Hello!",
+        "Parrot: Hello!",
+        "Sally: Wow. It’s so funny. Let me think about what I want to say. Mumm… I am a noisy parrot.",
+        "Parrot: I am a noisy parrot.",
+        "Sally: Ha Ha! What a funny parrot!"
+      ],
+      "sourcePages": [
+        11
+      ]
+    },
+    {
+      "id": "no-1-passage-33",
+      "title": "Birthday gift",
+      "paragraphs": [
+        "It’s Teddy Bear’s birthday. What shall I give him?",
+        "Lily Parrot: I can give him a star.",
+        "Timmy Elephant: I can give him a drum.",
+        "Bella Cat: I want to give him a coat.",
+        "Patrick Kangaroo: I can give him a trumpet.",
+        "John Hippo: Can I give him a dirty old shoe?"
+      ],
+      "sourcePages": [
+        12
+      ]
+    }
+  ]
+}

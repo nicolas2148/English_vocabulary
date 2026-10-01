@@ -36,3 +36,10 @@ python -m http.server 4173
 
 项目可直接部署到 GitHub Pages。所有资源使用相对路径，因此仓库项目页和自定义域名均可正常工作。
 
+
+
+## 英语短文朗读
+
+新增 [Reading 阅读应用](https://nicolas2148.github.io/English_vocabulary/Reading/)，包含 10 份材料、294 篇短文，支持逐篇阅读、文档目录、字号调节及每日阅读时间与文档记录。
+
+`Reading/` 与 `vocabulary/` 入口并列。`vocabulary/` 继续指向根目录中的原有背单词应用，保持原网址和学习记录。阅读应用的内容维护方法见 [Reading/README.md](Reading/README.md)。

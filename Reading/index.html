@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b3b49">
+  <meta name="description" content="按 No. 选择英语短文，在 iPad 上清晰朗读，记录每日阅读时间。">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css?v=20261001-1">
+  <title>英语短文朗读 · Powered by Aden</title>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="英语短文朗读首页"><span class="brand-mark" aria-hidden="true">A</span><span>英语短文朗读<small>Powered by Aden</small></span></a>
+      <nav class="top-links" aria-label="学习工具"><a href="../vocabulary/">背单词 ↗</a><span class="date-label" id="today-date"></span></nav>
+    </header>
+    <div class="app-layout">
+      <aside class="side-panel" aria-label="阅读概览">
+        <p class="eyebrow">YOUR DAILY READING</p>
+        <h1>读一点，<br><em>进步一点。</em></h1>
+        <div class="today-time"><span>今日阅读时间</span><strong id="today-time">0 分 0 秒</strong><small>每一次开口，都是进步。</small></div>
+        <div class="mini-stats"><div><strong id="today-doc-count">0</strong><span>份文档</span></div><div><strong id="today-passage-count">0</strong><span>篇短文</span></div></div>
+        <div class="today-docs"><p>今天读过</p><div id="today-docs"><span class="empty-chip">还没有阅读记录</span></div></div>
+        <p class="local-note">短文页可见时自动计时。暂停、进入目录或切到后台时停止。记录保存在这台设备中。</p>
+      </aside>
+      <main class="workspace">
+        <nav class="mode-tabs" aria-label="阅读功能">
+          <button type="button" id="library-tab" class="tab is-active" aria-pressed="true">选择文档</button>
+          <button type="button" id="history-tab" class="tab" aria-pressed="false">阅读记录</button>
+        </nav>
+        <p id="app-status" class="app-status" role="status" aria-live="polite">正在加载阅读材料…</p>
+        <section id="library-view" class="view" aria-labelledby="library-heading">
+          <div class="view-heading"><div><p class="eyebrow">ONE PASSAGE AT A TIME</p><h2 id="library-heading">今天读哪一份？</h2></div><span class="position" id="library-count">—</span></div>
+          <p class="section-intro">选择一个 No.，打开这一份文档里的所有短文。</p>
+          <div id="document-grid" class="document-grid"></div>
+        </section>
+        <section id="menu-view" class="view" aria-labelledby="menu-heading" hidden>
+          <div class="view-heading"><div><p class="eyebrow" id="menu-label">CONTENTS</p><h2 id="menu-heading">短文目录</h2></div><button type="button" class="secondary-button" id="continue-reading">继续阅读</button></div>
+          <p class="section-intro">点选任意一篇开始朗读。目录页不计时。</p>
+          <ol id="passage-menu" class="passage-menu"></ol>
+        </section>
+        <section id="reader-view" class="view reader-view" aria-labelledby="passage-title" hidden>
+          <div class="reader-toolbar"><span class="position" id="passage-position">—</span><div class="font-controls" aria-label="字号"><button type="button" id="font-smaller" aria-label="减小字号">A−</button><span id="font-label">26px</span><button type="button" id="font-larger" aria-label="增大字号">A+</button></div></div>
+          <div class="timer-line"><span class="timer-status"><i aria-hidden="true" id="timer-dot"></i><span id="timer-status">正在计时</span><strong id="session-time">00:00</strong></span><button type="button" id="pause-timer" class="text-button">暂停计时</button></div>
+          <article class="reading-card"><p class="eyebrow" id="passage-label"></p><h2 id="passage-title" tabindex="-1"></h2><div id="passage-body" class="passage-body" lang="en"></div><div class="reading-end" aria-hidden="true"><span></span>✦<span></span></div></article>
+          <nav class="passage-navigation" aria-label="短文导航"><button type="button" id="previous" class="secondary-button">← Previous</button><button type="button" id="menu" class="menu-button">Menu</button><button type="button" id="next" class="primary-button">Next →</button></nav>
+        </section>
+        <section id="history-view" class="view" aria-labelledby="history-heading" hidden>
+          <div class="view-heading"><div><p class="eyebrow">A LITTLE, EVERY DAY</p><h2 id="history-heading">阅读足迹</h2></div><button type="button" id="export-records" class="secondary-button">导出记录</button></div>
+          <div class="history-summary"><div><span>累计阅读</span><strong id="total-time">0 分钟</strong></div><div><span>阅读天数</span><strong id="reading-days">0 天</strong></div></div>
+          <p class="section-intro">每一天读过的 No. 和阅读时长都会保存在这里。</p>
+          <div id="history-list" class="history-list"></div>
+        </section>
+      </main>
+    </div>
+    <footer class="page-footer"><span>Read aloud. Grow a little.</span><span>Powered by Aden</span></footer>
+  </div>
+  <noscript>请开启 JavaScript 后使用阅读应用。</noscript>
+  <script src="./progress.js?v=20261001-1" defer></script>
+  <script src="./app.js?v=20261001-1" defer></script>
+</body>
+</html>

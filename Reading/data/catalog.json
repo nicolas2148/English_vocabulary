@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "documents": [
+    {
+      "id": "no-1",
+      "number": 1,
+      "label": "No.1",
+      "sourceFile": "No.1.pdf",
+      "count": 33,
+      "file": "./data/no-1.json",
+      "preview": "Sam is a little boy. He is 3 years old. This is the first day for little Sam to go to"
+    },
+    {
+      "id": "no-2",
+      "number": 2,
+      "label": "No.2",
+      "sourceFile": "No.2.pdf",
+      "count": 35,
+      "file": "./data/no-2.json",
+      "preview": "My day"
+    },
+    {
+      "id": "no-3",
+      "number": 3,
+      "label": "No.3",
+      "sourceFile": "No.3.pdf",
+      "count": 16,
+      "file": "./data/no-3.json",
+      "preview": "Little Red Riding Hood"
+    },
+    {
+      "id": "no-4",
+      "number": 4,
+      "label": "No.4",
+      "sourceFile": "No.4.pdf",
+      "count": 30,
+      "file": "./data/no-4.json",
+      "preview": "A New Classmate"
+    },
+    {
+      "id": "no-5",
+      "number": 5,
+      "label": "No.5",
+      "sourceFile": "No.5.pdf",
+      "count": 30,
+      "file": "./data/no-5.json",
+      "preview": "My First School Radio Show"
+    },
+    {
+      "id": "no-6",
+      "number": 6,
+      "label": "No.6",
+      "sourceFile": "No.6_英语阅读背诵材料.docx",
+      "count": 30,
+      "file": "./data/no-6.json",
+      "preview": "A Chess Game with Grandma"
+    },
+    {
+      "id": "no-7",
+      "number": 7,
+      "label": "No.7",
+      "sourceFile": "No.7_英语阅读背诵材料.docx",
+      "count": 30,
+      "file": "./data/no-7.json",
+      "preview": "The Recipe for Four"
+    },
+    {
+      "id": "no-8",
+      "number": 8,
+      "label": "No.8",
+      "sourceFile": "No.8_英语阅读背诵材料.docx",
+      "count": 30,
+      "file": "./data/no-8.json",
+      "preview": "The Instructions We Tested"
+    },
+    {
+      "id": "no-9",
+      "number": 9,
+      "label": "No.9",
+      "sourceFile": "No.9_英语阅读背诵材料.docx",
+      "count": 30,
+      "file": "./data/no-9.json",
+      "preview": "The Suitcase for One Night"
+    },
+    {
+      "id": "no-10",
+      "number": 10,
+      "label": "No.10",
+      "sourceFile": "No.10_英语阅读背诵材料.docx",
+      "count": 30,
+      "file": "./data/no-10.json",
+      "preview": "The Apron with Two Pockets"
+    }
+  ]
+}
